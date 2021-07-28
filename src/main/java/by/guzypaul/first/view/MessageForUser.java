@@ -2,21 +2,35 @@ package by.guzypaul.first.view;
 
 public class MessageForUser {
 
+    /*private final String showInvitation = "Select a menu item:" + "\n"
+            + "1. Find the value of a function: с = 3 + a" + "\n"
+            + "2. Find the area of a rectangle" + "\n"
+            + "3. Find the arithmetic mean of the cubes of two numbers and the geometric mean of their modules." + "\n"
+            + "4. Get a^8  и a^10." + "\n"
+            + "5. Add time to current value. " + "\n"
+            + "6. Exit"
+            + "\n";*/
+
+    /*public void printMessage (String typeMessage){
+        System.out.println(typeMessage);
+    }*/
+
     public void showInvitation(){
-        System.out.println("Выберете пункт меню:" + "\n" + "1. Найти значение функции: с = 3 + a" + "\n"
-                + "2. Найти площадь прямоугольника ширина которого в два раза меньше длины" + "\n"
-                + "3. Найти среднее арифметическое кубов двух чисел и среднее геометрическое их модулей." + "\n"
-                + "4. Получить a^8  и a^10." + "\n"
-                + "5. Прибавить время к текущему показанию" + "\n"
-                + "6. выход"
+        System.out.println("Select a menu item:" + "\n"
+                + "1. Find the value of a function: с = 3 + a" + "\n"
+                + "2. Find the area of a rectangle" + "\n"
+                + "3. Find the arithmetic mean of the cubes of two numbers and the geometric mean of their modules." + "\n"
+                + "4. Get a^8  и a^10." + "\n"
+                + "5. Add time to current value. " + "\n"
+                + "6. Exit"
                 + "\n");
     }
 
     public void correctUser(){
-        System.out.println("выбран неправильный пункт меню, повторите ввод.");
+        System.out.println("Wrong menu item is selected, re-enter." + "\n");
     }
 
     public void enterNumber(){
-        System.out.println("Enter number: ");
+        System.out.println("Enter number: " + "\n");
     }
 }

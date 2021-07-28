@@ -1,5 +1,7 @@
 package by.guzypaul.first.service;
 
+import by.guzypaul.first.entity.Time;
+
 /**
  * Task32
  * Текущее показание электронных часов: m ч(0<=m<=23) n мин(0<=n<=59) k
@@ -7,40 +9,32 @@ package by.guzypaul.first.service;
  */
 
 public class TimeCalculator {
+    public void addTime(Time time, int p, int q, int r) {
 
-    private int hours = 4;
-    private int minutes = 45;
-    private int seconds = 56;
+        int tempHours = time.getHours();
+        int tempMinutes = time.getMinutes();
+        int tempSeconds = time.getSeconds();
 
-    public void countTime(int p, int q, int r) {
-
-        seconds = seconds + r;
-        if (seconds > 59) {
-            seconds = seconds - 60;
-            minutes++;
+        tempSeconds = tempSeconds + r;
+        if (tempSeconds > 59) {
+            tempSeconds = tempSeconds - 60;
+            tempMinutes++;
         }
 
-        minutes = minutes + q;
-        if (minutes > 59) {
-            minutes = minutes - 60;
-            hours++;
+        tempMinutes = tempMinutes + q;
+        if (tempMinutes > 59) {
+            tempMinutes = tempMinutes - 60;
+            tempHours++;
         }
 
-        hours = hours + p;
-        if (hours > 23) {
-            hours = hours - 24;
+        tempHours = tempHours + p;
+        if (tempHours > 23) {
+            tempHours = tempHours - 24;
         }
-    }
 
-    public int getHours () {
-        return hours;
-    }
+        time.setHours(tempHours);
+        time.setMinutes(tempMinutes);
+        time.setSeconds(tempSeconds);
 
-    public int getMinutes () {
-        return minutes;
-    }
-
-    public int getSeconds () {
-        return seconds;
     }
 }
