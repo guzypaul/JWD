@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class RectangleCreator {
 
     private double width;
-    RectangleValidator rectangleValidator = new RectangleValidator();
-    Scanner scanner = new Scanner(System.in);
 
-    public void widthRequest () {
+    public RectangleCreator () {
+        RectangleValidator rectangleValidator = new RectangleValidator();
+        Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.println("Enter width: ");
             int tempWidth = scanner.nextInt();
@@ -21,7 +22,6 @@ public class RectangleCreator {
             }
         }
     }
-
     public double getWidth() {
         return width;
     }

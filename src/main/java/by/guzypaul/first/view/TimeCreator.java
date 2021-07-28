@@ -9,10 +9,9 @@ public class TimeCreator {
     private int minutes;
     private int seconds;
 
-    Scanner scanner = new Scanner(System.in);
-    TimeValidator timeValidator = new TimeValidator();
-
-    public void timeRequest (){
+    public TimeCreator (){
+        Scanner scanner = new Scanner(System.in);
+        TimeValidator timeValidator = new TimeValidator();
 
         while(true){
             System.out.println("Enter hours: ");

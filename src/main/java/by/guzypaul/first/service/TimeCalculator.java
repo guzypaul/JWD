@@ -11,8 +11,8 @@ import by.guzypaul.first.entity.Time;
 public class TimeCalculator {
     public void addTime(Time time,Time interval) {
 
-        int tempHours = time.getHours();
-        int tempMinutes = time.getMinutes();
+        int tempHours = 0;
+        int tempMinutes = 0;
         int tempSeconds;
 
         tempSeconds = time.getSeconds() + interval.getSeconds();
@@ -21,13 +21,13 @@ public class TimeCalculator {
             tempMinutes++;
         }
 
-        tempMinutes = time.getMinutes() + interval.getMinutes();
+        tempMinutes = time.getMinutes() + interval.getMinutes() + tempMinutes;
         if (tempMinutes > 59) {
             tempMinutes = tempMinutes - 60;
             tempHours++;
         }
 
-        tempHours = time.getHours() + interval.getHours();
+        tempHours = time.getHours() + interval.getHours() + tempHours;
         if (tempHours > 23) {
             tempHours = tempHours - 24;
         }

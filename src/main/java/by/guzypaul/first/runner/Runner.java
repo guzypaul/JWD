@@ -37,7 +37,6 @@ public class Runner {
 
                 case 2:
                     RectangleCreator rectangleCreator = new RectangleCreator();
-                    rectangleCreator.widthRequest();
                     Rectangle rectangle = new Rectangle(rectangleCreator.getWidth());
                     RectangleAction rectangleAction = new RectangleAction();
                     System.out.println("Square of rectangle: " + rectangleAction.findSquare(rectangle) + "\n");
@@ -59,19 +58,19 @@ public class Runner {
                 case 4:
                     System.out.println("Enter number: ");
                     double num = scanner.nextInt();
-                    Exponentiation power = new Exponentiation();
-                    power.raisingNumberToPower(num);
-                    System.out.println("Num in 8 power: " + power.getNumInEightPower());
-                    System.out.println("Num in 10 power: " + power.getNumInTenPower() + "\n");
+                    Exponentiation exponentiationOfNum = new Exponentiation();
+                    exponentiationOfNum.raisingNumberToPower(num);
+                    System.out.println("Num in 8 power: " + exponentiationOfNum.getNumInEightPower());
+                    System.out.println("Num in 10 power: " + exponentiationOfNum.getNumInTenPower() + "\n");
                     break;
 
                 case 5:
+                    System.out.println("Enter start time");
                     TimeCreator timeEnter = new TimeCreator();
-                    timeEnter.timeRequest();
                     Time time = new Time(timeEnter.getHours(), timeEnter.getMinutes(), timeEnter.getSeconds());
 
+                    System.out.println("Enter interval of time");
                     TimeCreator intervalEnter = new TimeCreator();
-                    intervalEnter.timeRequest();
                     Time interval = new Time(intervalEnter.getHours(), intervalEnter.getMinutes(), intervalEnter.getSeconds());
 
                     System.out.println("Start time: " + time);

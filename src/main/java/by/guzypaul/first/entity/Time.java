@@ -4,13 +4,6 @@ public class Time {
     private int hours;
     private int minutes;
     private int seconds;
-   /* String strHours;
-    String strMinutes;
-    String strSeconds;
-
-    strHours = String.format("%02d", hours);
-    strMinutes = String.format("%02d", minutes);
-    strSeconds = String.format("%02d", seconds);*/
 
     public Time () {
         this.hours = 0;
