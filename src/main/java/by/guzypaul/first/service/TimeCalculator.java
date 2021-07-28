@@ -9,25 +9,25 @@ import by.guzypaul.first.entity.Time;
  */
 
 public class TimeCalculator {
-    public void addTime(Time time, int p, int q, int r) {
+    public void addTime(Time time,Time interval) {
 
         int tempHours = time.getHours();
         int tempMinutes = time.getMinutes();
-        int tempSeconds = time.getSeconds();
+        int tempSeconds;
 
-        tempSeconds = tempSeconds + r;
+        tempSeconds = time.getSeconds() + interval.getSeconds();
         if (tempSeconds > 59) {
             tempSeconds = tempSeconds - 60;
             tempMinutes++;
         }
 
-        tempMinutes = tempMinutes + q;
+        tempMinutes = time.getMinutes() + interval.getMinutes();
         if (tempMinutes > 59) {
             tempMinutes = tempMinutes - 60;
             tempHours++;
         }
 
-        tempHours = tempHours + p;
+        tempHours = time.getHours() + interval.getHours();
         if (tempHours > 23) {
             tempHours = tempHours - 24;
         }
@@ -35,6 +35,5 @@ public class TimeCalculator {
         time.setHours(tempHours);
         time.setMinutes(tempMinutes);
         time.setSeconds(tempSeconds);
-
     }
 }

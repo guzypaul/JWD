@@ -4,6 +4,13 @@ public class Time {
     private int hours;
     private int minutes;
     private int seconds;
+   /* String strHours;
+    String strMinutes;
+    String strSeconds;
+
+    strHours = String.format("%02d", hours);
+    strMinutes = String.format("%02d", minutes);
+    strSeconds = String.format("%02d", seconds);*/
 
     public Time () {
         this.hours = 0;
@@ -63,12 +70,6 @@ public class Time {
 
     @Override
     public String toString() {
-        return "Time{" +
-                "hours=" + hours +
-                ", minutes=" + minutes +
-                ", seconds=" + seconds +
-                '}';
+        return String.format("{hours = %02d, minutes = %02d, seconds = %02d}", hours, minutes, seconds);
     }
-
-
 }

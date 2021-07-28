@@ -7,7 +7,9 @@ import by.guzypaul.first.entity.Time;
 import by.guzypaul.first.service.*;
 import by.guzypaul.first.service.RectangleAction;
 import by.guzypaul.first.view.MessageForUser;
-
+import by.guzypaul.first.validate.TimeValidator;
+import by.guzypaul.first.view.RectangleCreator;
+import by.guzypaul.first.view.TimeCreator;
 
 public class Runner {
 
@@ -15,6 +17,7 @@ public class Runner {
 
         Scanner scanner = new Scanner(System.in);
         MessageForUser message = new MessageForUser();
+        TimeValidator timeValidator = new TimeValidator();
 
         while (true) {
            // message.printMessage(showInvitation);
@@ -33,9 +36,9 @@ public class Runner {
                     break;
 
                 case 2:
-                    System.out.println("Enter width of a rectangle: ");
-                    double width = scanner.nextInt();
-                    Rectangle rectangle = new Rectangle(width);
+                    RectangleCreator rectangleCreator = new RectangleCreator();
+                    rectangleCreator.widthRequest();
+                    Rectangle rectangle = new Rectangle(rectangleCreator.getWidth());
                     RectangleAction rectangleAction = new RectangleAction();
                     System.out.println("Square of rectangle: " + rectangleAction.findSquare(rectangle) + "\n");
                     break;
@@ -63,31 +66,20 @@ public class Runner {
                     break;
 
                 case 5:
-                    System.out.println("Enter hours: ");
-                    int hours = scanner.nextInt();
-                    System.out.println("Enter minutes: ");
-                    int minutes = scanner.nextInt();
-                    System.out.println("Enter seconds: ");
-                    int seconds = scanner.nextInt();
+                    TimeCreator timeEnter = new TimeCreator();
+                    timeEnter.timeRequest();
+                    Time time = new Time(timeEnter.getHours(), timeEnter.getMinutes(), timeEnter.getSeconds());
 
-                    Time time = new Time(hours, minutes, seconds);
-                    //String strHours = String.format("%0d", hours);
-                    //System.out.println(strHours);
-                    System.out.println("Start time: " + "\n" + time.getHours() + ":" + time.getMinutes() + ":"
-                            + time.getSeconds() + "\n");
+                    TimeCreator intervalEnter = new TimeCreator();
+                    intervalEnter.timeRequest();
+                    Time interval = new Time(intervalEnter.getHours(), intervalEnter.getMinutes(), intervalEnter.getSeconds());
 
-                    System.out.println("Enter interval of hours: ");
-                    hours = scanner.nextInt();
-                    System.out.println("Enter interval of minutes: ");
-                    minutes = scanner.nextInt();
-                    System.out.println("Enter interval of  seconds: ");
-                    seconds = scanner.nextInt();
-                    System.out.println("Interval: " + hours + ":" + minutes + ":" + seconds);
+                    System.out.println("Start time: " + time);
+                    System.out.println("Interval: " + interval);
 
                     TimeCalculator timeCalc = new TimeCalculator();
-                    timeCalc.addTime(time, hours, minutes, seconds);
-                    System.out.println("Expected time: " + "\n" + time.getHours() + ":" + time.getMinutes() + ":"
-                            + time.getSeconds() + "\n");
+                    timeCalc.addTime(time, interval);
+                    System.out.println("Expected time: " + time + "\n");
                     break;
 
                 case 6:

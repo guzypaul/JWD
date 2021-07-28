@@ -17,7 +17,7 @@ public class Rectangle {
     public Rectangle(double width) {
         this.width = width;
         this.length = width * 2;
-        logger.log(Level.INFO, "created Rectangle ");
+        //logger.log(Level.INFO, "created Rectangle ");
     }
 
     public double getWidth() {
