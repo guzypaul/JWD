@@ -23,11 +23,8 @@ public class Runner {
         MessageForUser message = new MessageForUser();
 
         while (true) {
-
             message.showInvitation();
-
             int choice = scanner.nextInt();
-
 
             switch (choice) {
 
@@ -85,7 +82,7 @@ public class Runner {
 
                     TimeCalculator timeCalc = new TimeCalculator();
                     timeCalc.addTime(time, interval);
-                    logger.log(Level.ERROR, "Expected time: " + time + "\n");
+                    logger.log(Level.INFO, "Expected time: " + time + "\n");
                     break;
 
                 case 6:

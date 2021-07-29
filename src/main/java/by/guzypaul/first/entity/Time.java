@@ -1,14 +1,10 @@
 package by.guzypaul.first.entity;
 
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class Time {
     private int hours;
     private int minutes;
     private int seconds;
-    private static final Logger logger = LogManager.getLogger();
+
 
     public Time () {
         this.hours = 0;
@@ -20,7 +16,6 @@ public class Time {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
-        logger.log(Level.INFO, "created Time (logInfo) ");
     }
 
     public int getHours() {

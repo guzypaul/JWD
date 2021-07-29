@@ -7,9 +7,8 @@ package by.guzypaul.first.service;
 
 public class FunctionCalc {
 
-    private final int specificNumber = 3;
-
     public double additionWithSpecificNumber(double arg) {
+        int specificNumber = 3;
         double result = specificNumber + arg;
         return result;
     }
