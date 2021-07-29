@@ -18,7 +18,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        logger.log(Level.INFO, "Mian method START ");
+        logger.log(Level.INFO, "Main method START ");
         Scanner scanner = new Scanner(System.in);
         MessageForUser message = new MessageForUser();
 
