@@ -10,14 +10,16 @@ import org.apache.logging.log4j.Logger;
 public class Rectangle {
     private double width;
     private double length;
-    public static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger();
     public Rectangle() {
+        logger.log(Level.ERROR, "created EmptyRectangle ");
     }
 
     public Rectangle(double width) {
         this.width = width;
         this.length = width * 2;
-        //logger.log(Level.INFO, "created Rectangle ");
+        logger.log(Level.ERROR, "created Rectangle ");
+        logger.log(Level.INFO, "created Rectangle (logInfo) ");
     }
 
     public double getWidth() {

@@ -7,20 +7,23 @@ import by.guzypaul.first.entity.Time;
 import by.guzypaul.first.service.*;
 import by.guzypaul.first.service.RectangleAction;
 import by.guzypaul.first.view.MessageForUser;
-import by.guzypaul.first.validate.TimeValidator;
-import by.guzypaul.first.view.RectangleCreator;
-import by.guzypaul.first.view.TimeCreator;
+import by.guzypaul.first.view.RectangleReader;
+import by.guzypaul.first.view.TimeReader;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Runner {
+    private static final Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) {
 
+        logger.log(Level.INFO, "Mian method START ");
         Scanner scanner = new Scanner(System.in);
         MessageForUser message = new MessageForUser();
-        TimeValidator timeValidator = new TimeValidator();
 
         while (true) {
-           // message.printMessage(showInvitation);
+
             message.showInvitation();
 
             int choice = scanner.nextInt();
@@ -32,14 +35,16 @@ public class Runner {
                     message.enterNumber();
                     double arg = scanner.nextInt();
                     FunctionCalc function = new FunctionCalc();
-                    System.out.println("Result: " + function.additionWithSpecificNumber(arg) + "\n");
+                    double resultAdditionWithSpecificNumber = function.additionWithSpecificNumber(arg);
+                    logger.log(Level.INFO, "Result: " + resultAdditionWithSpecificNumber + "\n");
                     break;
 
                 case 2:
-                    RectangleCreator rectangleCreator = new RectangleCreator();
+                    RectangleReader rectangleCreator = new RectangleReader();
                     Rectangle rectangle = new Rectangle(rectangleCreator.getWidth());
                     RectangleAction rectangleAction = new RectangleAction();
-                    System.out.println("Square of rectangle: " + rectangleAction.findSquare(rectangle) + "\n");
+                    double resultFindSquare = rectangleAction.findSquare(rectangle);
+                    logger.log(Level.INFO, "Square of rectangle: " + resultFindSquare + "\n");
                     break;
 
                 case 3:
@@ -49,10 +54,10 @@ public class Runner {
                     double num2 = scanner.nextInt();
 
                     ArithmeticCalc arithmetic = new ArithmeticCalc();
-
-                    System.out.println("Arithmetic mean of cubes: " + arithmetic.findArithmeticMeanOfCubes(num1, num2));
-                    System.out.println(
-                            "Geometric Mean Of Modules: " + arithmetic.findGeometricMeanOfModules(num1, num2) + "\n");
+                    double resultFindArithmeticMeanOfCubes = arithmetic.findArithmeticMeanOfCubes(num1, num2);
+                    double resultFindGeometricMeanOfModules = arithmetic.findGeometricMeanOfModules(num1, num2);
+                    logger.log(Level.INFO, "Arithmetic mean of cubes: " + resultFindArithmeticMeanOfCubes);
+                    logger.log(Level.INFO, "Geometric Mean Of Modules: " + resultFindGeometricMeanOfModules + "\n");
                     break;
 
                 case 4:
@@ -60,25 +65,27 @@ public class Runner {
                     double num = scanner.nextInt();
                     Exponentiation exponentiationOfNum = new Exponentiation();
                     exponentiationOfNum.raisingNumberToPower(num);
-                    System.out.println("Num in 8 power: " + exponentiationOfNum.getNumInEightPower());
-                    System.out.println("Num in 10 power: " + exponentiationOfNum.getNumInTenPower() + "\n");
+                    double resultGetNumInEightPower = exponentiationOfNum.getNumInEightPower();
+                    double resultGetNumInTenPower = exponentiationOfNum.getNumInTenPower();
+                    logger.log(Level.INFO, "Num in 8 power: " + resultGetNumInEightPower);
+                    logger.log(Level.INFO, "Num in 10 power: " + resultGetNumInTenPower);
                     break;
 
                 case 5:
                     System.out.println("Enter start time");
-                    TimeCreator timeEnter = new TimeCreator();
+                    TimeReader timeEnter = new TimeReader();
                     Time time = new Time(timeEnter.getHours(), timeEnter.getMinutes(), timeEnter.getSeconds());
 
                     System.out.println("Enter interval of time");
-                    TimeCreator intervalEnter = new TimeCreator();
+                    TimeReader intervalEnter = new TimeReader();
                     Time interval = new Time(intervalEnter.getHours(), intervalEnter.getMinutes(), intervalEnter.getSeconds());
 
-                    System.out.println("Start time: " + time);
-                    System.out.println("Interval: " + interval);
+                    logger.log(Level.INFO, "Start time: " + time);
+                    logger.log(Level.INFO, "Interval: " + interval);
 
                     TimeCalculator timeCalc = new TimeCalculator();
                     timeCalc.addTime(time, interval);
-                    System.out.println("Expected time: " + time + "\n");
+                    logger.log(Level.ERROR, "Expected time: " + time + "\n");
                     break;
 
                 case 6:

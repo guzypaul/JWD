@@ -1,22 +1,22 @@
 package by.guzypaul.first.view;
 
-import by.guzypaul.first.validate.TimeValidator;
+import by.guzypaul.first.validator.TimeValidator;
 import java.util.Scanner;
 
-public class TimeCreator {
+public class TimeReader {
 
-    private int hours;
-    private int minutes;
-    private int seconds;
+    final private int hours;
+    final private int minutes;
+    final private int seconds;
 
-    public TimeCreator (){
+    public TimeReader(){
         Scanner scanner = new Scanner(System.in);
         TimeValidator timeValidator = new TimeValidator();
 
         while(true){
             System.out.println("Enter hours: ");
             int tempHours = scanner.nextInt();
-            if (timeValidator.checkHours(tempHours) == true){
+            if (timeValidator.checkHours(tempHours)){
                 hours = tempHours;
                 break;
             } else {
@@ -27,7 +27,7 @@ public class TimeCreator {
         while(true){
             System.out.println("Enter minutes: ");
             int tempMinutes = scanner.nextInt();
-            if (timeValidator.checkMinutes(tempMinutes) == true){
+            if (timeValidator.checkMinutes(tempMinutes)){
                 minutes = tempMinutes;
                 break;
             } else {
@@ -38,7 +38,7 @@ public class TimeCreator {
         while(true){
             System.out.println("Enter seconds: ");
             int tempSeconds = scanner.nextInt();
-            if (timeValidator.checkSeconds(tempSeconds) == true){
+            if (timeValidator.checkSeconds(tempSeconds)){
                 seconds = tempSeconds;
                 break;
             } else {

@@ -1,20 +1,20 @@
 package by.guzypaul.first.view;
 
-import by.guzypaul.first.validate.RectangleValidator;
+import by.guzypaul.first.validator.RectangleValidator;
 import java.util.Scanner;
 
-public class RectangleCreator {
+public class RectangleReader {
 
-    private double width;
+    final private double width;
 
-    public RectangleCreator () {
+    public RectangleReader() {
         RectangleValidator rectangleValidator = new RectangleValidator();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("Enter width: ");
             int tempWidth = scanner.nextInt();
-            if (rectangleValidator.chekWeidth(tempWidth) == true) {
+            if (rectangleValidator.chekWidth(tempWidth)) {
                 width = tempWidth;
                 break;
             } else {
