@@ -46,9 +46,9 @@ public class Runner {
 
                 case 3:
                     System.out.println("Enter number one: ");
-                    double num1 = scanner.nextInt();
+                    double num1 = scanner.nextDouble();
                     System.out.println("Enter number two: ");
-                    double num2 = scanner.nextInt();
+                    double num2 = scanner.nextDouble();
 
                     ArithmeticCalc arithmetic = new ArithmeticCalc();
                     double resultFindArithmeticMeanOfCubes = arithmetic.findArithmeticMeanOfCubes(num1, num2);

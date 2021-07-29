@@ -25,4 +25,34 @@ public class Exponentiation {
     public double getNumInTenPower() {
         return numInTenPower;
     }
+
+    public void setNumInEightPower(double numInEightPower) {
+        this.numInEightPower = numInEightPower;
+    }
+
+    public void setNumInTenPower(double numInTenPower) {
+        this.numInTenPower = numInTenPower;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Exponentiation)) return false;
+
+        Exponentiation that = (Exponentiation) o;
+
+        if (Double.compare(that.getNumInEightPower(), getNumInEightPower()) != 0) return false;
+        return Double.compare(that.getNumInTenPower(), getNumInTenPower()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(getNumInEightPower());
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(getNumInTenPower());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
