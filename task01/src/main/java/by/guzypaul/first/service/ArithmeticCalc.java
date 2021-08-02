@@ -9,11 +9,11 @@ package by.guzypaul.first.service;
 
 public class ArithmeticCalc {
 
-    private int cube = 3;
-    private int denominator = 2;
+    private final static int CUBE = 3;
+    private final static int DENOMINATOR = 2;
 
     public double findArithmeticMeanOfCubes(double arg1, double arg2) {
-        double arithmeticMeanOfCubes = (Math.pow(arg1, cube) + Math.pow(arg2, cube)) / denominator;
+        double arithmeticMeanOfCubes = (Math.pow(arg1, CUBE) + Math.pow(arg2, CUBE)) / DENOMINATOR;
         return arithmeticMeanOfCubes;
     }
 

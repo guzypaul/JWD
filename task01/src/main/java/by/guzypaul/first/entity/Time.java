@@ -6,13 +6,13 @@ public class Time {
     private int seconds;
 
 
-    public Time () {
+    public Time() {
         this.hours = 0;
         this.minutes = 0;
         this.seconds = 0;
     }
 
-    public Time (int hours, int minutes, int seconds) {
+    public Time(int hours, int minutes, int seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
@@ -49,16 +49,16 @@ public class Time {
 
         Time time = (Time) o;
 
-        if (getHours() != time.getHours()) return false;
-        if (getMinutes() != time.getMinutes()) return false;
-        return getSeconds() == time.getSeconds();
+        if (hours != time.getHours()) return false;
+        if (minutes != time.getMinutes()) return false;
+        return seconds == time.getSeconds();
     }
 
     @Override
     public int hashCode() {
-        int result = getHours();
-        result = 31 * result + getMinutes();
-        result = 31 * result + getSeconds();
+        int result = hours;
+        result = 31 * result + minutes;
+        result = 31 * result + seconds;
         return result;
     }
 

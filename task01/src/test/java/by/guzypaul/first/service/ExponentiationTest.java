@@ -1,6 +1,5 @@
 package by.guzypaul.first.service;
 
-import by.guzypaul.first.entity.Time;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;

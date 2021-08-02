@@ -1,12 +1,5 @@
 package by.guzypaul.first.entity;
 
-import org.apache.logging.log4j.LogManager;
-
-import java.util.Objects;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class Rectangle {
     private double width;
     private double length;

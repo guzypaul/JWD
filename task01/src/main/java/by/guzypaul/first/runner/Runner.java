@@ -14,7 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Runner {
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(Runner.class);
 
     public static void main(String[] args) {
 
@@ -33,7 +33,7 @@ public class Runner {
                     double arg = scanner.nextInt();
                     FunctionCalc function = new FunctionCalc();
                     double resultAdditionWithSpecificNumber = function.additionWithSpecificNumber(arg);
-                    logger.log(Level.INFO, "Result: " + resultAdditionWithSpecificNumber + "\n");
+                    logger.log(Level.INFO, "Result: " + resultAdditionWithSpecificNumber);
                     break;
 
                 case 2:
@@ -41,7 +41,7 @@ public class Runner {
                     Rectangle rectangle = new Rectangle(rectangleCreator.getWidth());
                     RectangleAction rectangleAction = new RectangleAction();
                     double resultFindSquare = rectangleAction.findSquare(rectangle);
-                    logger.log(Level.INFO, "Square of rectangle: " + resultFindSquare + "\n");
+                    logger.log(Level.INFO, "Square of rectangle: " + resultFindSquare);
                     break;
 
                 case 3:
