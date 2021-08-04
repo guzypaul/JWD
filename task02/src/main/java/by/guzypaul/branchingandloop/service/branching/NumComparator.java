@@ -2,21 +2,21 @@ package by.guzypaul.branchingandloop.service.branching;
 
 /**
  * @author Guzy Paul
- * Task02 (branching): compare two numbers;
+ * Task02 (branching): compare if number one less than number two;
  */
 
 public class NumComparator {
-    private String positive = "yes";
-    private String negative = "no";
+    private final String POSITIVE = "yes";
+    private final String NEGATIVE = "no";
 
     /**
-     * @param numberTwo, numberTwo;
-     * @return positive or negative String answer;
+     * @param numberTwo, numberTwo - numbers for comparison;
+     * @return positive or negative result of comparison two numbers;
      */
     public String numberComparator(int numberOne, int numberTwo) {
         if (numberOne < numberTwo) {
-            return positive;
+            return POSITIVE;
         }
-        return negative;
+        return NEGATIVE;
     }
 }

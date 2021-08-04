@@ -1,6 +1,7 @@
 package by.guzypaul.branchingandloop.service.loop;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author Guzy Paul
@@ -13,16 +14,17 @@ public class DividerCalc {
      * @param startPoint, finishPoint;
      * @return list of dividers;
      */
-    public ArrayList<Integer> findAllDividers (int startPoint, int finishPoint){
-        ArrayList<Integer> dividerList = new ArrayList<Integer>();
+    public HashMap<Integer, ArrayList> findAllDividers(int startPoint, int finishPoint) {
+        HashMap<Integer, ArrayList> numberAndDividerList = new HashMap<>();
         for (int i = startPoint; i <= finishPoint; i++) {
+            ArrayList<Integer> dividerList = new ArrayList<>();
             for (int j = 2; j < i; j++) {
                 if ((i % j) == 0) {
                     dividerList.add(j);
-                    //System.out.println("Divider of " + i + " is " + j);
                 }
             }
+            numberAndDividerList.put(i, dividerList);
         }
-        return dividerList;
+        return numberAndDividerList;
     }
 }

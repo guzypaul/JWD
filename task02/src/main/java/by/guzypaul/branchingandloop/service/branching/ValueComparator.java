@@ -8,8 +8,8 @@ package by.guzypaul.branchingandloop.service.branching;
 public class ValueComparator {
 
     /**
-     * @param a, b, с ,d;
-     * @return result of max{min(a,b), minc(c,d))};
+     * @param a, b, с ,d - arguments for function;
+     * @return result of function max{min(a,b), minc(c,d))};
      */
     public double findMaxAmongMin(double a, double b, double c, double d) {
         double result = Math.max((Math.min(a, b)), Math.min(c, d));

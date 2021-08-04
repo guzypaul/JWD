@@ -6,11 +6,13 @@ import java.util.ArrayList;
  * @author Guzy Paul
  * Task07 (loop): find value of function on a slice [a,b] with step h
  * y = x, if x >2
- * y = -z, if x<=2;
+ * y = -x, if x<=2;
  */
 public class ComplexFunctionCalc {
     /**
-     * @param startPoint, finishPoint, step;
+     * @param startPoint - the start of the line segment;
+     *                   finishPoint - the end points of the line segment;
+     *                   step - function step;
      * @return value of function;
      */
     public ArrayList findFunctionValue(double startPoint, double finishPoint, int step) {

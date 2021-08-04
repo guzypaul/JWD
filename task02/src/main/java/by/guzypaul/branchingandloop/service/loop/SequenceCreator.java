@@ -11,7 +11,7 @@ public class SequenceCreator {
      * @return simple array of sequence of number;
      */
     public int[] createDescendingSequence(int startNumber, int endNumber){
-        int numberOfCell = Math.abs(startNumber - endNumber);
+        int numberOfCell = Math.abs(startNumber - endNumber) + 1;
         int[] simpleArray = new int[numberOfCell];
         for (int i = 0, j = startNumber; i < simpleArray.length; i++, j--){
             simpleArray[0] = j;

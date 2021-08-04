@@ -2,16 +2,16 @@ package by.guzypaul.branchingandloop.service.branching;
 
 /**
  * @author Guzy Paul
- * Task32 (branching): find positive sum of pairs from three number;
+ * Task32 (branching): find positive sum of numbers pairs from three number;
  */
 
-public class SumChecker {
+public class SumValidator {
 
     private final int numberOfParameters = 3;
     private double[] sumArray = new double[numberOfParameters];
 
     /**
-     * @param numberTwo, numberTwo, numberThree;
+     * @param numberTwo, numberTwo, numberThree - numbers for finding sum of every pairs;
      * @return array of sum of pairs numbers;
      */
     public void findSumEveryPairs(double numberOne, double numberTwo, double numberThree) {
@@ -22,7 +22,7 @@ public class SumChecker {
 
     /**
      * @param sumArray of sum of pairs numbers;
-     * @return boolean result;
+     * @return result - show: positive sum exists or no;
      */
     public boolean findPositiveSum(double[] sumArray) {
         boolean result = false;
@@ -33,5 +33,9 @@ public class SumChecker {
             }
         }
         return result;
+    }
+
+    public double[] getSumArray() {
+        return sumArray;
     }
 }
