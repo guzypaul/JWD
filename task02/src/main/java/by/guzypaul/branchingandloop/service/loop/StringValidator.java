@@ -13,19 +13,14 @@ import java.util.regex.Pattern;
 public class StringValidator {
 
     static void stringToCharArray(String inputString) {
-        char[] charArray = inputString.toCharArray();
 
-        char firstCharacther = inputString.charAt(0);
-        if (!Character.isLetter(firstCharacther) ) {
-            // do something
-        }
 
         Pattern pattern = Pattern.compile("\\w");
         Matcher matcher = pattern.matcher(inputString);
+        /*private static final String DATE_REGEX = "\\d\\d-\\d\\d\\d\\d";
+        22-1234
+*/
 
-        while (matcher.find()) {
-            System.out.println(inputString.substring(matcher.start(), matcher.end()));
-        }
 //TODO: method
     }
 }

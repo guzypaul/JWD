@@ -6,18 +6,17 @@ package by.guzypaul.branchingandloop.service.branching;
  */
 
 public class SumValidator {
-
-    private final int numberOfParameters = 3;
-    private double[] sumArray = new double[numberOfParameters];
-
     /**
      * @param numberTwo, numberTwo, numberThree - numbers for finding sum of every pairs;
      * @return array of sum of pairs numbers;
      */
-    public void findSumEveryPairs(double numberOne, double numberTwo, double numberThree) {
+    public double[] findSumEveryPairs(double numberOne, double numberTwo, double numberThree) {
+        int numberOfParameters = 3;
+        double[] sumArray = new double[numberOfParameters];
         sumArray[0] = numberOne + numberTwo;
         sumArray[1] = numberOne + numberThree;
         sumArray[2] = numberTwo + numberThree;
+        return sumArray;
     }
 
     /**
@@ -33,9 +32,5 @@ public class SumValidator {
             }
         }
         return result;
-    }
-
-    public double[] getSumArray() {
-        return sumArray;
     }
 }

@@ -6,10 +6,6 @@ package by.guzypaul.branchingandloop.service.branching;
  */
 public class FunctionCalc {
     private final int QUADRATE;
-    private double a;
-    private double b;
-    private double c;
-    private double x;
 
     public FunctionCalc() {
         QUADRATE = 2;

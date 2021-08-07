@@ -7,15 +7,15 @@ import java.util.HashMap;
  * @author Guzy Paul
  * Task27 (loop): find all dividers for all natural numbers on slice [m, n] (instead of 1 and the number itself);
  */
-
 public class DividerCalc {
-
     /**
-     * @param startPoint, finishPoint;
+     * @param arrayOfPoints that contains startPoint & finishPoint;
      * @return list of dividers;
      */
-    public HashMap<Integer, ArrayList> findAllDividers(int startPoint, int finishPoint) {
-        HashMap<Integer, ArrayList> numberAndDividerList = new HashMap<>();
+    public HashMap<Integer, ArrayList> findAllDividers(int[] arrayOfPoints) {
+        int startPoint = arrayOfPoints[0];
+        int finishPoint = arrayOfPoints[1];
+        HashMap<Integer, ArrayList> numberAndDividerMap = new HashMap<>();
         for (int i = startPoint; i <= finishPoint; i++) {
             ArrayList<Integer> dividerList = new ArrayList<>();
             for (int j = 2; j < i; j++) {
@@ -23,8 +23,8 @@ public class DividerCalc {
                     dividerList.add(j);
                 }
             }
-            numberAndDividerList.put(i, dividerList);
+            numberAndDividerMap.put(i, dividerList);
         }
-        return numberAndDividerList;
+        return numberAndDividerMap;
     }
 }

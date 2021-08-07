@@ -7,14 +7,16 @@ package by.guzypaul.branchingandloop.service.loop;
 
 public class SequenceCreator {
     /**
-     * @param startNumber, endNumber for sequence;
+     * @param arrayOfNum contains startNumber & endNumber for descending sequence;
      * @return simple array of sequence of number;
      */
-    public int[] createDescendingSequence(int startNumber, int endNumber){
+    public int[] createDescendingSequence(int[] arrayOfNum){
+        int startNumber = arrayOfNum[0];
+        int endNumber = arrayOfNum[1];
         int numberOfCell = Math.abs(startNumber - endNumber) + 1;
         int[] simpleArray = new int[numberOfCell];
         for (int i = 0, j = startNumber; i < simpleArray.length; i++, j--){
-            simpleArray[0] = j;
+            simpleArray[i] = j;
         }
         return simpleArray;
     }

@@ -15,7 +15,7 @@ public class ComplexFunctionCalc {
      *                   step - function step;
      * @return value of function;
      */
-    public ArrayList findFunctionValue(double startPoint, double finishPoint, int step) {
+    public ArrayList findFunctionValue(double startPoint, double finishPoint, double step) {
         ArrayList<Double> valueList = new ArrayList<Double>();
         double x = startPoint;
         double y;
