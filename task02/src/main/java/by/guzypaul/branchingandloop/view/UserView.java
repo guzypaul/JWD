@@ -136,9 +136,10 @@ public class UserView {
 
                 case 10:
                     messagePrinter.printMessage(rb.getString("ENTER_STRING_FOR_CHECKING"));
-                    String inputString = scanner.nextLine();
+                    String inputString = scanner.nextLine(); //TODO fix problem (system run this step)
                     StringValidator  stringValidator = new StringValidator();
-                    stringValidator.stringToCharArray(inputString);
+                    String stringResult = stringValidator.stringToCharArray(inputString);
+                    messagePrinter.printMessage(rb.getString(stringResult));
                     break;
 
                 case 11:
