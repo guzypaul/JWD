@@ -2,10 +2,7 @@ package by.guzypaul.branchingandloop.view;
 
 import by.guzypaul.branchingandloop.reader.*;
 import by.guzypaul.branchingandloop.service.branching.*;
-import by.guzypaul.branchingandloop.service.loop.ComplexFunctionCalc;
-import by.guzypaul.branchingandloop.service.loop.DividerCalc;
-import by.guzypaul.branchingandloop.service.loop.SequenceCalc;
-import by.guzypaul.branchingandloop.service.loop.SequenceCreator;
+import by.guzypaul.branchingandloop.service.loop.*;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -138,7 +135,10 @@ public class UserView {
                     break;
 
                 case 10:
-                    logger.log(Level.INFO, "Task is in progress");
+                    messagePrinter.printMessage(rb.getString("ENTER_STRING_FOR_CHECKING"));
+                    String inputString = scanner.nextLine();
+                    StringValidator  stringValidator = new StringValidator();
+                    stringValidator.stringToCharArray(inputString);
                     break;
 
                 case 11:

@@ -34,7 +34,7 @@ public class ComplexFunctionCalcReader {
         }
 
         while (true) {
-            messagePrinter.printMessage(rb.getString("ENTER_FINISH_POINT") + startPoint);
+            messagePrinter.printMessage(rb.getString("ENTER_FINISH_POINT") + " "+ startPoint);
             if (scanner.hasNextDouble()) {
                 double tempFinishPoint = scanner.nextDouble();
                 if (complexFunctionCalcValidator.checkFinishPoint(startPoint, tempFinishPoint)) {

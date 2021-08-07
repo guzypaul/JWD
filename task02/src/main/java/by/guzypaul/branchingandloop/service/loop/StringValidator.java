@@ -12,14 +12,10 @@ import java.util.regex.Pattern;
 
 public class StringValidator {
 
-    static void stringToCharArray(String inputString) {
+    public void stringToCharArray(String inputString) {
 
-
-        Pattern pattern = Pattern.compile("\\w");
+        Pattern pattern = Pattern.compile("^[a-zA-Z_]");
         Matcher matcher = pattern.matcher(inputString);
-        /*private static final String DATE_REGEX = "\\d\\d-\\d\\d\\d\\d";
-        22-1234
-*/
 
 //TODO: method
     }
