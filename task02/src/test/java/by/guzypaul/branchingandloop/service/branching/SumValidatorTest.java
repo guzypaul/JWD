@@ -1,13 +1,12 @@
 package by.guzypaul.branchingandloop.service.branching;
 
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import java.util.Arrays;
-
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.internal.junit.ArrayAsserts.assertArrayEquals;
 
 public class SumValidatorTest {
+    private static final double DELTA = 0.001;
     SumValidator sumValidator = new SumValidator();
 
     @DataProvider(name = "findSumEveryPairsData")
@@ -28,7 +27,7 @@ public class SumValidatorTest {
     @Test(dataProvider = "findSumEveryPairsData")
     public void testfindSumEveryPairs(double[] arrayOfNumbers,double[] expectedResult) {
         double[] actual = sumValidator.findSumEveryPairs(arrayOfNumbers[0], arrayOfNumbers[1], arrayOfNumbers[2]);
-        Assert.assertTrue(Arrays.equals(actual, expectedResult)); //??????
+        assertArrayEquals(actual, expectedResult, DELTA);
     }
 
     @DataProvider(name = "addFindPositiveSumData")

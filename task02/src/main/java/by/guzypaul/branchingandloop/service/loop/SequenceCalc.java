@@ -9,12 +9,12 @@ import java.util.ArrayList;
  */
 public class SequenceCalc {
     /**
-     * @param dataList - contain number and finishPoint;
+     * @param dataArray - contain number and finishPoint;
      * @return result multiplication members of sequence;
      */
-    public double findMultiplicationMembersOfSequence (double[] dataList){
-        double a = dataList[0];
-        int n = (int)dataList[1];
+    public double findMultiplicationMembersOfSequence (double[] dataArray){
+        double a = dataArray[0];
+        int n = (int)dataArray[1];
         double result = a;
         for(int i = 1; i < n; i++){
             result *= (a + i);

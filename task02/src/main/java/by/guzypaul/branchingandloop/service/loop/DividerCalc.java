@@ -23,7 +23,9 @@ public class DividerCalc {
                     dividerList.add(j);
                 }
             }
-            numberAndDividerMap.put(i, dividerList);
+            if(!dividerList.isEmpty()){
+                numberAndDividerMap.put(i, dividerList);
+            }
         }
         return numberAndDividerMap;
     }
