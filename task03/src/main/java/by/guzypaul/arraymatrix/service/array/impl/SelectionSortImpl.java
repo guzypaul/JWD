@@ -1,10 +1,11 @@
-package by.guzypaul.arraymatrix.service.arrayImpl;
+package by.guzypaul.arraymatrix.service.array.impl;
 
-import by.guzypaul.arraymatrix.service.array.SortSelection;
+import by.guzypaul.arraymatrix.exception.ServiceException;
+import by.guzypaul.arraymatrix.service.array.SelectionSort;
 
-public class SortSelectionImpl implements SortSelection {
+public class SelectionSortImpl implements SelectionSort {
     @Override
-    public void sortSelection(int[] array) throws SecurityException {
+    public void selectionSort(int[] array) throws ServiceException {
         for (int i = 0; i < array.length; i++) {
             int pos = i;
             int min = array[i];

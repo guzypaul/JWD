@@ -1,10 +1,11 @@
-package by.guzypaul.arraymatrix.service.arrayImpl;
+package by.guzypaul.arraymatrix.service.array.impl;
 
-import by.guzypaul.arraymatrix.service.array.SortShaker;
+import by.guzypaul.arraymatrix.exception.ServiceException;
+import by.guzypaul.arraymatrix.service.array.ShakerSort;
 
-public class SortShakerImpl implements SortShaker {
+public class ShakerSortImpl implements ShakerSort {
     @Override
-    public void sortShaker(int[] array) throws SecurityException {
+    public void shakerSort(int[] array) throws ServiceException {
         int left = 0;
         int right = array.length - 1;
         int temp;

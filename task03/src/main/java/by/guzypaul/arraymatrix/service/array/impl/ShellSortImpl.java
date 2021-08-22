@@ -1,10 +1,11 @@
-package by.guzypaul.arraymatrix.service.arrayImpl;
+package by.guzypaul.arraymatrix.service.array.impl;
 
-import by.guzypaul.arraymatrix.service.array.SortShell;
+import by.guzypaul.arraymatrix.exception.ServiceException;
+import by.guzypaul.arraymatrix.service.array.ShellSort;
 
-public class SortShellImpl implements SortShell {
+public class ShellSortImpl implements ShellSort {
     @Override
-    public void sortShell(int[] array) throws SecurityException {
+    public void shellSort(int[] array) throws ServiceException {
         int h = 1;
         while (h * 3 < array.length)
             h = h * 3 + 1;

@@ -6,8 +6,10 @@ public class MatrixEntity  {
 
     private int[][] a;
     public MatrixEntity(int[][] a) {
+
         this.a = a;
     }
+
     public MatrixEntity(int n, int m) throws MatrixException {
         if (n < 1 || m < 1) {// check input
             throw new MatrixException();
@@ -16,10 +18,13 @@ public class MatrixEntity  {
     }
     public int getVerticalSize() {
         return a.length;
+
     }
     public int getHorizontalSize() {
+
         return a[0].length;
     }
+
     public int getElement(int i, int j) throws MatrixException {
         if (checkRange(i, j)) { // check i & j
             return a[i][j];

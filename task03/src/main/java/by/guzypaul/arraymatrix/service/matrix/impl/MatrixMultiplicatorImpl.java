@@ -1,10 +1,10 @@
-package by.guzypaul.arraymatrix.service.matrixImpl;
+package by.guzypaul.arraymatrix.service.matrix.impl;
 
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
 import by.guzypaul.arraymatrix.exception.MatrixException;
-import by.guzypaul.arraymatrix.service.matrix.Multiplicator;
+import by.guzypaul.arraymatrix.service.matrix.MatrixMultiplicator;
 
-public class MultiplicatorImpl implements Multiplicator {
+public class MatrixMultiplicatorImpl implements MatrixMultiplicator {
     @Override
     public MatrixEntity multiply(MatrixEntity p, MatrixEntity q) throws MatrixException {
         int v = p.getVerticalSize();
