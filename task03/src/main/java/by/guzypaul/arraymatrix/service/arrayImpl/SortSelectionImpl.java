@@ -1,6 +1,6 @@
-package by.guzypaul.arraymatrix.service.impl;
+package by.guzypaul.arraymatrix.service.arrayImpl;
 
-import by.guzypaul.arraymatrix.service.SortSelection;
+import by.guzypaul.arraymatrix.service.array.SortSelection;
 
 public class SortSelectionImpl implements SortSelection {
     @Override

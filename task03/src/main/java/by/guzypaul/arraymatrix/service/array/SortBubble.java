@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.service;
+package by.guzypaul.arraymatrix.service.array;
 
 /**
  * The interface SortBubble

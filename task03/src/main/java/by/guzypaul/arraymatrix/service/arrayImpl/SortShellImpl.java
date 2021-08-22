@@ -1,6 +1,6 @@
-package by.guzypaul.arraymatrix.service.impl;
+package by.guzypaul.arraymatrix.service.arrayImpl;
 
-import by.guzypaul.arraymatrix.service.SortShell;
+import by.guzypaul.arraymatrix.service.array.SortShell;
 
 public class SortShellImpl implements SortShell {
     @Override

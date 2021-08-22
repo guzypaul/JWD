@@ -1,6 +1,6 @@
-package by.guzypaul.arraymatrix.service.impl;
+package by.guzypaul.arraymatrix.service.arrayImpl;
 
-import by.guzypaul.arraymatrix.service.SortShaker;
+import by.guzypaul.arraymatrix.service.array.SortShaker;
 
 public class SortShakerImpl implements SortShaker {
     @Override
@@ -11,7 +11,6 @@ public class SortShakerImpl implements SortShaker {
         while (left <= right) {
             for (int i = right; i > left; --i) {
                 if (array[i - 1] > array[i]) {
-                    //swap(array, i - 1, i);
                     temp = array[i];
                     array[i] = array[i - 1];
                     array[i - 1] = temp;

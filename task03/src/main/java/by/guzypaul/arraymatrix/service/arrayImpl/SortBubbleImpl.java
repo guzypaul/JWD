@@ -1,6 +1,6 @@
-package by.guzypaul.arraymatrix.service.impl;
+package by.guzypaul.arraymatrix.service.arrayImpl;
 
-import by.guzypaul.arraymatrix.service.SortBubble;
+import by.guzypaul.arraymatrix.service.array.SortBubble;
 
 public class SortBubbleImpl  implements SortBubble{
     @Override
