@@ -1,4 +1,4 @@
 package by.guzypaul.arraymatrix.dao.impl;
 
-public class ArrayDaoImpl {
+public class ArrayDaoImpl { //TODO ArrayDaoImpl
 }

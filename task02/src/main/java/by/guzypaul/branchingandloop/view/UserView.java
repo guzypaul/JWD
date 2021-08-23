@@ -25,8 +25,6 @@ public class UserView {
     Scanner scanner = new Scanner(System.in);
     PrintMessage messagePrinter = new PrintMessage();
 
-    private static final String SELECT_LANGUAGE = "Choose language, plese!/Пожалуйста, выберите язык! " + "\n"
-            + "1. English/ 2.Русский";
     private static final String A = "a";
     private static final String B = "b";
     private static final String C = "c";
