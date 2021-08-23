@@ -1,11 +1,13 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.InsertionSort;
 
 public class InsertionSortImpl implements InsertionSort {
     @Override
-    public void insertionSort(int[] array) throws ServiceException { //TODO ServiceException
+    public void insertionSort(ArrayEntity newArray) throws ServiceException {
+        int[] array = newArray.getArray();
         for (int i = 1; i < array.length; i++) {
             int current = array[i];
             int j = i - 1;

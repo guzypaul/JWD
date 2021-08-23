@@ -1,5 +1,6 @@
 package by.guzypaul.arraymatrix.service.array;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 
 /**
@@ -9,5 +10,5 @@ import by.guzypaul.arraymatrix.exception.ServiceException;
 
 public interface BubbleSort {
 
-    void bubbleSort(int[] array) throws ServiceException;
+    void bubbleSort(ArrayEntity array) throws ServiceException;
 }

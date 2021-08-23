@@ -1,11 +1,13 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.SelectionSort;
 
 public class SelectionSortImpl implements SelectionSort {
     @Override
-    public void selectionSort(int[] array) throws ServiceException {
+    public void selectionSort(ArrayEntity newArray) throws ServiceException {
+        int[] array = newArray.getArray();
         for (int i = 0; i < array.length; i++) {
             int pos = i;
             int min = array[i];

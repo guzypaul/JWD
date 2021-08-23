@@ -1,11 +1,13 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.ShakerSort;
 
 public class ShakerSortImpl implements ShakerSort {
     @Override
-    public void shakerSort(int[] array) throws ServiceException {
+    public void shakerSort(ArrayEntity newArray) throws ServiceException {
+        int[] array = newArray.getArray();
         int left = 0;
         int right = array.length - 1;
         int temp;

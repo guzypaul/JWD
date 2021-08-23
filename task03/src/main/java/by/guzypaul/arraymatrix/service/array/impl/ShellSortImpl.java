@@ -1,11 +1,13 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.ShellSort;
 
 public class ShellSortImpl implements ShellSort {
     @Override
-    public void shellSort(int[] array) throws ServiceException {
+    public void shellSort(ArrayEntity newArray) throws ServiceException {
+        int[] array = newArray.getArray();
         int h = 1;
         while (h * 3 < array.length)
             h = h * 3 + 1;
@@ -16,7 +18,8 @@ public class ShellSortImpl implements ShellSort {
         }
     }
 
-    private void hSort(int[] array, int h) {
+    @Override
+    public void hSort(int[] array, int h) throws ServiceException {
         int length = array.length;
         int temp;
         for (int i = h; i < length; i++) {

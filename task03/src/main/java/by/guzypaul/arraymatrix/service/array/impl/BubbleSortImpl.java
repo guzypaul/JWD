@@ -1,12 +1,13 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.BubbleSort;
 
 public class BubbleSortImpl implements BubbleSort {
     @Override
-    public void bubbleSort(int[] array) throws ServiceException {
-
+    public void bubbleSort(ArrayEntity newArray) throws ServiceException {
+        int[] array = newArray.getArray();
         boolean isSorted = false;
         int temp;
         while(!isSorted) {

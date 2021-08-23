@@ -1,8 +1,9 @@
 package by.guzypaul.arraymatrix.service.array;
 
+import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.exception.ServiceException;
 
 public interface ShakerSort {
 
-    void shakerSort(int[] array) throws ServiceException;
+    void shakerSort(ArrayEntity array) throws ServiceException;
 }

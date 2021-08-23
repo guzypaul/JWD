@@ -2,9 +2,9 @@ package by.guzypaul.arraymatrix.service.matrix.impl;
 
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
 import by.guzypaul.arraymatrix.exception.MatrixException;
-import by.guzypaul.arraymatrix.service.matrix.MatrixSubtraction;
+import by.guzypaul.arraymatrix.service.matrix.MatrixSubstraction;
 
-public class MatrixSubstractionImpl implements MatrixSubtraction {
+public class MatrixSubstractionImpl implements MatrixSubstraction {
     @Override
     public MatrixEntity substract(MatrixEntity matrixOne, MatrixEntity matrixTwo) throws MatrixException {
 
