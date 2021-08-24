@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.exception;
+package by.guzypaul.arraymatrix.entity.exception;
 
 public class ArrayException extends Exception {
     public ArrayException() {

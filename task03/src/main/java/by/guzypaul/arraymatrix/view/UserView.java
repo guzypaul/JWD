@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class UserView {
+public class  UserView {
     private static final Logger logger = LogManager.getLogger(UserView.class);
     Scanner scanner = new Scanner(System.in);
     PrintMessage messagePrinter = new PrintMessage();

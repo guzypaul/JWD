@@ -1,6 +1,6 @@
 package by.guzypaul.arraymatrix.dao.reader;
 
-import by.guzypaul.arraymatrix.exception.DaoException;
+import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

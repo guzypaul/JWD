@@ -1,6 +1,6 @@
 package by.guzypaul.arraymatrix.entity;
 
-import by.guzypaul.arraymatrix.exception.ArrayException;
+import by.guzypaul.arraymatrix.entity.exception.ArrayException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

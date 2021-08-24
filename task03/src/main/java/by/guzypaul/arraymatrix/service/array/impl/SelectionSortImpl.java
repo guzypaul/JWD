@@ -1,7 +1,7 @@
 package by.guzypaul.arraymatrix.service.array.impl;
 
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
-import by.guzypaul.arraymatrix.exception.ServiceException;
+import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.SelectionSort;
 
 public class SelectionSortImpl implements SelectionSort {

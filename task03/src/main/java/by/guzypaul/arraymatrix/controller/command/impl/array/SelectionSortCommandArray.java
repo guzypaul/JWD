@@ -2,7 +2,7 @@ package by.guzypaul.arraymatrix.controller.command.impl.array;
 
 import by.guzypaul.arraymatrix.controller.command.CommandArray;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
-import by.guzypaul.arraymatrix.exception.ServiceException;
+import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.SelectionSort;
 import by.guzypaul.arraymatrix.service.array.impl.SelectionSortImpl;
 import org.apache.logging.log4j.Level;

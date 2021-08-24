@@ -1,7 +1,7 @@
 package by.guzypaul.arraymatrix.service.matrix.impl;
 
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
-import by.guzypaul.arraymatrix.exception.MatrixException;
+import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 import by.guzypaul.arraymatrix.service.matrix.MatrixSubtraction;
 
 public class MatrixSubtractionImpl implements MatrixSubtraction {

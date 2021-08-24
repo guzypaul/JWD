@@ -6,7 +6,7 @@ import by.guzypaul.arraymatrix.dao.impl.MatrixDaoImpl;
 public final class DaoFactory {
     private static final DaoFactory instance = new DaoFactory();
 
-    /*private final ArrayDao arrayImpl = new ArrayDaoImpl();
+    private final ArrayDao arrayImpl = new ArrayDaoImpl();
     private final MatrixDao matrixImpl = new MatrixDaoImpl();
 
     private DaoFactory(){}
@@ -18,5 +18,5 @@ public final class DaoFactory {
     }
     public MatrixDao getMatrixDAO(){
         return matrixImpl;
-    }*/
+    }
 }

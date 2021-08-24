@@ -1,6 +1,6 @@
 package by.guzypaul.arraymatrix.entity;
 
-import by.guzypaul.arraymatrix.exception.MatrixException;
+import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 
 public class MatrixEntity  {
 

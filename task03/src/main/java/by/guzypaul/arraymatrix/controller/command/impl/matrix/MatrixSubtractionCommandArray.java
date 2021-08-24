@@ -2,7 +2,7 @@ package by.guzypaul.arraymatrix.controller.command.impl.matrix;
 
 import by.guzypaul.arraymatrix.controller.command.CommandMatrix;
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
-import by.guzypaul.arraymatrix.exception.MatrixException;
+import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 import by.guzypaul.arraymatrix.service.matrix.MatrixSubtraction;
 import by.guzypaul.arraymatrix.service.matrix.impl.MatrixSubtractionImpl;
 import org.apache.logging.log4j.Level;

@@ -1,4 +1,7 @@
 package by.guzypaul.arraymatrix.dao;
 
-public interface MatrixDao {
+import by.guzypaul.arraymatrix.dao.exception.DaoException;
+
+public interface MatrixDao{
+        void getData() throws DaoException;
 }

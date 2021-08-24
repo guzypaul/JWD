@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.exception;
+package by.guzypaul.arraymatrix.service.exception;
 
 public class ServiceException extends Exception{
     public ServiceException() {
