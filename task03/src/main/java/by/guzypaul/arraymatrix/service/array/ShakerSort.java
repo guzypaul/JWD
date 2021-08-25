@@ -5,5 +5,5 @@ import by.guzypaul.arraymatrix.service.exception.ServiceException;
 
 public interface ShakerSort {
 
-    void shakerSort(ArrayEntity array) throws ServiceException;
+    void shakerSort() throws ServiceException;
 }

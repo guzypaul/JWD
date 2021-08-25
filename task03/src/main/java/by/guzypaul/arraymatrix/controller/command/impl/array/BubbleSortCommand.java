@@ -1,7 +1,6 @@
 package by.guzypaul.arraymatrix.controller.command.impl.array;
 
-import by.guzypaul.arraymatrix.controller.command.CommandArray;
-import by.guzypaul.arraymatrix.entity.ArrayEntity;
+import by.guzypaul.arraymatrix.controller.Command;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.BubbleSort;
 import by.guzypaul.arraymatrix.service.array.impl.BubbleSortImpl;
@@ -9,13 +8,13 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class BubbleSortCommandArray implements CommandArray {
-    private static final Logger logger = LogManager.getLogger(BubbleSortCommandArray.class);
+public class BubbleSortCommand implements Command {
+    private static final Logger logger = LogManager.getLogger(BubbleSortCommand.class);
     @Override
-    public void execute(ArrayEntity array) {
+    public void execute() {
         try{
             BubbleSort sorter = new BubbleSortImpl();
-            sorter.bubbleSort(array);
+            sorter.bubbleSort();
         }catch (ServiceException e){
             logger.log(Level.ERROR, e.getMessage());
         }

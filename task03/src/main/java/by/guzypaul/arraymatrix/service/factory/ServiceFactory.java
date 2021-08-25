@@ -1,27 +1,58 @@
 package by.guzypaul.arraymatrix.service.factory;
 
-import by.guzypaul.arraymatrix.service.array.ArrayService;
-import by.guzypaul.arraymatrix.service.array.impl.ArrayServiceImpl;
-import by.guzypaul.arraymatrix.service.matrix.MatrixService;
-import by.guzypaul.arraymatrix.service.matrix.impl.MatrixServiceImpl;
+import by.guzypaul.arraymatrix.service.array.*;
+import by.guzypaul.arraymatrix.service.array.impl.*;
+import by.guzypaul.arraymatrix.service.matrix.MatrixMultiplicator;
+import by.guzypaul.arraymatrix.service.matrix.MatrixSubtraction;
+import by.guzypaul.arraymatrix.service.matrix.MatrixSum;
+import by.guzypaul.arraymatrix.service.matrix.impl.MatrixMultiplicatorImpl;
+import by.guzypaul.arraymatrix.service.matrix.impl.MatrixSubtractionImpl;
+import by.guzypaul.arraymatrix.service.matrix.impl.MatrixSumImpl;
+
 
 public class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final ArrayService arrayService = new ArrayServiceImpl();
-    private final MatrixService matrixService = new MatrixServiceImpl();
+    private final BubbleSort bubbleSort = new BubbleSortImpl();
+    private final InsertionSort insertionSort = new InsertionSortImpl();
+    private final SelectionSort selectionSort = new SelectionSortImpl();
+    private final ShakerSort shakerSort = new ShakerSortImpl();
+    private final ShellSort shellSort = new ShellSortImpl();
+
+    private final MatrixMultiplicator matrixMultiplicator = new MatrixMultiplicatorImpl();
+    private final MatrixSubtraction matrixSubtractor = new MatrixSubtractionImpl();
+    private final MatrixSum matrixSum = new MatrixSumImpl();
 
     private ServiceFactory(){}
 
     public static ServiceFactory getInstance(){
         return instance;
     }
-    public ArrayService getArrayService(){
-        return arrayService;
+
+    public BubbleSort getBubbleSort(){
+        return bubbleSort;
     }
-    public MatrixService getMatrixService (){
-        return matrixService;
+    public InsertionSort getInsertionSort(){
+        return  insertionSort;
+    }
+    public SelectionSort getSelectionSort(){
+        return selectionSort;
+    }
+    public ShakerSort getShakerSort(){
+        return shakerSort;
+    }
+    public ShellSort getShellSort(){
+        return shellSort;
     }
 
-    //TODO ServiceFactory
+    public MatrixMultiplicator getMatrixMultiplicator(){
+        return matrixMultiplicator;
+    }
+    public MatrixSubtraction getMatrixSubtraction(){
+        return matrixSubtractor;
+    }
+    public MatrixSum getMatrixSum(){
+        return matrixSum;
+    }
+
 }
