@@ -4,8 +4,6 @@ import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.parser.Parser;
 import by.guzypaul.arraymatrix.dao.reader.StringFromTextFileReader;
 import by.guzypaul.arraymatrix.dao.validator.CheckStringFromFile;
-import by.guzypaul.arraymatrix.entity.ArrayEntity;
-import by.guzypaul.arraymatrix.entity.exception.ArrayException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

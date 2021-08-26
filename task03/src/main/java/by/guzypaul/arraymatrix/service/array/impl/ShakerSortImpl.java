@@ -5,13 +5,12 @@ import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.entity.exception.ArrayException;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.array.ShakerSort;
 
-public class ShakerSortImpl implements ShakerSort {
+public class ShakerSortImpl implements ArraySorter {
 
-    @Override
-    public ArrayEntity shakerSort() throws ServiceException {
+    public ArrayEntity sort() throws ServiceException {
         ArrayEntity arrayEntity = null;
 
         DaoFactory daoObjectFactory = DaoFactory.getInstance();
@@ -26,7 +25,7 @@ public class ShakerSortImpl implements ShakerSort {
         int left = 0;
         int right = arrayEntity.array.length - 1;
         int temp;
-        while (left <= right) {
+        while (left <= right) {  //TODO incorrect
             for (int i = right; i > left; --i) {
                 if (arrayEntity.array[i - 1] > arrayEntity.array[i]) {
                     temp = arrayEntity.array[i];
@@ -35,6 +34,16 @@ public class ShakerSortImpl implements ShakerSort {
                 }
             }
         }
+
+       /* for(int  i = 0; i < array.legth / 2; i++){ //TODO Shaker
+            boolean swapped = false;
+            for (int j = i; j < array.Length - i - 1; j++){
+                if (array[j] < array[j + 1]){
+
+                }
+            }
+        }*/
+
         return arrayEntity;
     }
 }

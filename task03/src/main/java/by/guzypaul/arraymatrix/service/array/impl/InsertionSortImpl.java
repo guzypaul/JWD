@@ -5,13 +5,13 @@ import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.entity.exception.ArrayException;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.array.InsertionSort;
 
-public class InsertionSortImpl implements InsertionSort {
+public class InsertionSortImpl implements ArraySorter {
 
     @Override
-    public ArrayEntity insertionSort() throws ServiceException {
+    public ArrayEntity sort() throws ServiceException {
         ArrayEntity arrayEntity = null;
 
         DaoFactory daoObjectFactory = DaoFactory.getInstance();

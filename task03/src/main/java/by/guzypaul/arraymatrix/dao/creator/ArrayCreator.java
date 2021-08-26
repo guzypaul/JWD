@@ -20,7 +20,7 @@ public class ArrayCreator {
 
     public int[] createCustomArraysFromFile(String filePath) throws DaoException {
         int[] array = null;
-
+        ArrayEntity arrayEntity = null;
         customParser = new Parser();
         reader = new StringFromTextFileReader();
         List<String> stringsFromFile = reader.readStringsFromFile(filePath);

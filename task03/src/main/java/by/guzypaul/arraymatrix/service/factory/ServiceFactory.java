@@ -13,11 +13,11 @@ import by.guzypaul.arraymatrix.service.matrix.impl.MatrixSumImpl;
 public class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final BubbleSort bubbleSort = new BubbleSortImpl();
-    private final InsertionSort insertionSort = new InsertionSortImpl();
-    private final SelectionSort selectionSort = new SelectionSortImpl();
-    private final ShakerSort shakerSort = new ShakerSortImpl();
-    private final ShellSort shellSort = new ShellSortImpl();
+    private final ArraySorter bubbleSort = new BubbleSortImpl();
+    private final ArraySorter insertionSort = new InsertionSortImpl();
+    private final ArraySorter selectionSort = new SelectionSortImpl();
+    private final ArraySorter shakerSort = new ShakerSortImpl();
+    private final ArraySorter shellSort = new ShellSortImpl();
 
     private final MatrixMultiplicator matrixMultiplicator = new MatrixMultiplicatorImpl();
     private final MatrixSubtraction matrixSubtractor = new MatrixSubtractionImpl();
@@ -29,19 +29,19 @@ public class ServiceFactory {
         return instance;
     }
 
-    public BubbleSort getBubbleSort(){
+    public ArraySorter getBubbleSort(){
         return bubbleSort;
     }
-    public InsertionSort getInsertionSort(){
+    public ArraySorter getInsertionSort(){
         return  insertionSort;
     }
-    public SelectionSort getSelectionSort(){
+    public ArraySorter getSelectionSort(){
         return selectionSort;
     }
-    public ShakerSort getShakerSort(){
+    public ArraySorter getShakerSort(){
         return shakerSort;
     }
-    public ShellSort getShellSort(){
+    public ArraySorter getShellSort(){
         return shellSort;
     }
 

@@ -1,7 +1,7 @@
 package by.guzypaul.arraymatrix.controller.command.impl.array;
 
 import by.guzypaul.arraymatrix.controller.Command;
-import by.guzypaul.arraymatrix.service.array.SelectionSort;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.factory.ServiceFactory;
 import org.apache.logging.log4j.Level;
@@ -14,10 +14,10 @@ public class SelectionSortCommand implements Command {
     @Override
     public String execute() {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        SelectionSort sorter = serviceFactory.getSelectionSort();
+        ArraySorter sorter = serviceFactory.getSelectionSort();
 
         try {
-            response = sorter.selectionSort().toString();;
+            response = sorter.sort().toString();;
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

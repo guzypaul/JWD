@@ -1,6 +1,7 @@
 package by.guzypaul.arraymatrix.controller.command.impl.array;
 
 import by.guzypaul.arraymatrix.controller.Command;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.array.InsertionSort;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.factory.ServiceFactory;
@@ -14,10 +15,10 @@ public class InsertionSortCommand implements Command {
     @Override
     public String execute() {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        InsertionSort sorter = serviceFactory.getInsertionSort();
+        ArraySorter sorter = serviceFactory.getInsertionSort();
 
         try {
-            response = sorter.insertionSort().toString();
+            response = sorter.sort().toString();
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

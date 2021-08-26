@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.runner;
+package by.guzypaul.arraymatrix.controller;
 
 import by.guzypaul.arraymatrix.view.UserLocale;
 import by.guzypaul.arraymatrix.view.UserView;

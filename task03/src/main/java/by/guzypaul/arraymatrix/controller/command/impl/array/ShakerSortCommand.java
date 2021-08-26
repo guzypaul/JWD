@@ -1,8 +1,8 @@
 package by.guzypaul.arraymatrix.controller.command.impl.array;
 
 import by.guzypaul.arraymatrix.controller.Command;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.array.ShakerSort;
 import by.guzypaul.arraymatrix.service.factory.ServiceFactory;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -14,9 +14,9 @@ public class ShakerSortCommand implements Command {
     @Override
     public String execute() {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        ShakerSort sorter = serviceFactory.getShakerSort();
+        ArraySorter sorter = serviceFactory.getShakerSort();
         try {
-            response = sorter.shakerSort().toString();;
+            response = sorter.sort().toString();;
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

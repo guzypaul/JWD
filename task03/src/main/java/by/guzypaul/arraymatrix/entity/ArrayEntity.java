@@ -11,7 +11,7 @@ public class ArrayEntity {
 
 
     public final static Logger logger = LogManager.getLogger();
-    public int[] array;
+    public int[] array; //TODO public -> private
 
     public ArrayEntity(int[] array) throws ArrayException {
         if (array == null) {
@@ -42,12 +42,12 @@ public class ArrayEntity {
 
         ArrayEntity that = (ArrayEntity) o;
 
-        return Arrays.equals(getArray(), that.getArray());
+        return Arrays.equals(array, that.getArray());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getArray());
+        return Arrays.hashCode(array);
     }
 
     @Override

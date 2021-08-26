@@ -5,13 +5,12 @@ import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.entity.exception.ArrayException;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.array.ShellSort;
 
-public class ShellSortImpl implements ShellSort {
+public class ShellSortImpl implements ArraySorter {
 
-    @Override
-    public ArrayEntity shellSort() throws ServiceException {
+    public ArrayEntity sort() throws ServiceException {
         ArrayEntity arrayEntity = null;
 
         DaoFactory daoObjectFactory = DaoFactory.getInstance();
@@ -34,7 +33,6 @@ public class ShellSortImpl implements ShellSort {
         return arrayEntity;
     }
 
-    @Override
     public void hSort(int[] array, int h) throws ServiceException {
         int length = array.length;
         int temp;

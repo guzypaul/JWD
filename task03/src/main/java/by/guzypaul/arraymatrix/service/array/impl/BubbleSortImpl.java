@@ -5,17 +5,18 @@ import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.entity.exception.ArrayException;
+import by.guzypaul.arraymatrix.service.array.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.array.BubbleSort;
 
-public class BubbleSortImpl implements BubbleSort {
+public class BubbleSortImpl implements ArraySorter {
 
 
     @Override
-    public ArrayEntity bubbleSort() throws ServiceException {
+    public ArrayEntity sort() throws ServiceException {
         ArrayEntity arrayEntity = null;
         DaoFactory daoObjectFactory = DaoFactory.getInstance();
         ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
+        //TODO ServiceArray
 
         try{
             arrayEntity = new ArrayEntity(arrayDao.getData());
@@ -27,7 +28,7 @@ public class BubbleSortImpl implements BubbleSort {
         boolean isSorted = false;
         int temp;
         while(!isSorted) {
-            isSorted = true;
+            isSorted = true; //TODO while -> for
             for (int i = 0; i < arrayEntity.array.length - 1; i++) {
                 if (arrayEntity.array[i] > arrayEntity.array[i + 1]) {
                     isSorted = false;
