@@ -5,6 +5,8 @@ public enum CommandName {
     INSERTION_SORT,
     SELECTION_SORT,
     SHAKER_SORT,
-    SHELL_SORT;
-
+    SHELL_SORT,
+    MATRIX_MULTIPLICATOR,
+    MATRIX_SUBTRACTOR,
+    MATRIX_SUM;
 }

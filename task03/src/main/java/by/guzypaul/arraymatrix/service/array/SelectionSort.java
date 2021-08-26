@@ -4,5 +4,5 @@ import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 
 public interface SelectionSort {
-    void selectionSort() throws ServiceException;
+    ArrayEntity selectionSort() throws ServiceException;
 }

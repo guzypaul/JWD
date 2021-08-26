@@ -2,7 +2,8 @@ package by.guzypaul.arraymatrix.service.matrix;
 
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
 import by.guzypaul.arraymatrix.entity.exception.MatrixException;
+import by.guzypaul.arraymatrix.service.exception.ServiceException;
 
 public interface MatrixSubtraction {
-    MatrixEntity substract(MatrixEntity matrixOne, MatrixEntity matrixTwo) throws MatrixException;
+    MatrixEntity substract() throws MatrixException, ServiceException;
 }

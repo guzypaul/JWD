@@ -2,6 +2,8 @@ package by.guzypaul.arraymatrix.entity;
 
 import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 
+import java.util.Arrays;
+
 public class MatrixEntity  {
 
     private int[][] a;
@@ -52,6 +54,21 @@ public class MatrixEntity  {
             s.append("\n");
         }
         return s.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MatrixEntity)) return false;
+
+        MatrixEntity that = (MatrixEntity) o;
+
+        return Arrays.deepEquals(a, that.a);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.deepHashCode(a);
     }
 
     private boolean checkRange(int i, int j) {// check matrix range

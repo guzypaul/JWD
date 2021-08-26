@@ -9,28 +9,32 @@ import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.ShakerSort;
 
 public class ShakerSortImpl implements ShakerSort {
-    int[] array;
+
     @Override
-    public void shakerSort() throws ServiceException {
+    public ArrayEntity shakerSort() throws ServiceException {
+        ArrayEntity arrayEntity = null;
+
+        DaoFactory daoObjectFactory = DaoFactory.getInstance();
+        ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
+
         try{
-            DaoFactory daoObjectFactory = DaoFactory.getInstance();
-            ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
-            array = arrayDao.getData();
+            arrayEntity = new ArrayEntity(arrayDao.getData());
         }catch(DaoException | ArrayException e){
             throw new ServiceException(e);
         }
 
         int left = 0;
-        int right = array.length - 1;
+        int right = arrayEntity.array.length - 1;
         int temp;
         while (left <= right) {
             for (int i = right; i > left; --i) {
-                if (array[i - 1] > array[i]) {
-                    temp = array[i];
-                    array[i] = array[i - 1];
-                    array[i - 1] = temp;
+                if (arrayEntity.array[i - 1] > arrayEntity.array[i]) {
+                    temp = arrayEntity.array[i];
+                    arrayEntity.array[i] = arrayEntity.array[i - 1];
+                    arrayEntity.array[i - 1] = temp;
                 }
             }
         }
+        return arrayEntity;
     }
 }

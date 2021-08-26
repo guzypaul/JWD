@@ -9,30 +9,34 @@ import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.SelectionSort;
 
 public class SelectionSortImpl implements SelectionSort {
-    int[] array;
+
     @Override
-    public void selectionSort() throws ServiceException {
+    public ArrayEntity selectionSort() throws ServiceException {
+        ArrayEntity arrayEntity = null;
+
+        DaoFactory daoObjectFactory = DaoFactory.getInstance();
+        ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
 
         try{
-            DaoFactory daoObjectFactory = DaoFactory.getInstance();
-            ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
-            array = arrayDao.getData();
+            arrayEntity = new ArrayEntity(arrayDao.getData());
         }catch(DaoException | ArrayException e){
             throw new ServiceException(e);
         }
 
-        for (int i = 0; i < array.length; i++) {
+
+        for (int i = 0; i < arrayEntity.array.length; i++) {
             int pos = i;
-            int min = array[i];
+            int min = arrayEntity.array[i];
             // loop of selection minimum element
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min) {
+            for (int j = i + 1; j < arrayEntity.array.length; j++) {
+                if (arrayEntity.array[j] < min) {
                     pos = j;    // pos - index minimum element
-                    min = array[j];
+                    min = arrayEntity.array[j];
                 }
             }
-            array[pos] = array[i];
-            array[i] = min;    // change minimum element and "array[i]"
+            arrayEntity.array[pos] = arrayEntity.array[i];
+            arrayEntity.array[i] = min;    // change minimum element and "array[i]"
         }
+        return arrayEntity;
     }
 }

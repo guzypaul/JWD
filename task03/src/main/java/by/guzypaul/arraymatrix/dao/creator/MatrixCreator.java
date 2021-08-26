@@ -12,25 +12,28 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
-public class ArrayCreator {
+public class MatrixCreator {
     public final static Logger logger = LogManager.getLogger();
 
     Parser customParser;
     StringFromTextFileReader reader;
 
-    public int[] createCustomArraysFromFile(String filePath) throws DaoException {
-        int[] array = null;
+    public int[][] createCustomMatrixFromFile(String filePath) throws DaoException {
+        int[][] matrix = null;
 
         customParser = new Parser();
         reader = new StringFromTextFileReader();
         List<String> stringsFromFile = reader.readStringsFromFile(filePath);
+        int i = 0;
         for (String string : stringsFromFile) {
             if (CheckStringFromFile.isStringValid(string)) {
-                array = customParser.parseArrayFromString(string);
+                int[] tmpArray = customParser.parseArrayFromString(string);
+                matrix[i] = tmpArray;
+                i++;
                 logger.log(Level.INFO, "created CustomArray object, " );
             }
         }
-        logger.log(Level.INFO, "return array");
-        return array;
+        logger.log(Level.INFO, "return matrix");
+        return matrix;
     }
 }

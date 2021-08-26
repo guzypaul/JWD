@@ -9,25 +9,29 @@ import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.array.ShellSort;
 
 public class ShellSortImpl implements ShellSort {
-    int[] array;
+
     @Override
-    public void shellSort() throws ServiceException {
+    public ArrayEntity shellSort() throws ServiceException {
+        ArrayEntity arrayEntity = null;
+
+        DaoFactory daoObjectFactory = DaoFactory.getInstance();
+        ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
+
         try{
-            DaoFactory daoObjectFactory = DaoFactory.getInstance();
-            ArrayDao arrayDao = daoObjectFactory.getArrayDaoImpl();
-            array = arrayDao.getData();
+            arrayEntity = new ArrayEntity(arrayDao.getData());
         }catch(DaoException | ArrayException e){
             throw new ServiceException(e);
         }
 
         int h = 1;
-        while (h * 3 < array.length)
+        while (h * 3 < arrayEntity.array.length)
             h = h * 3 + 1;
 
         while (h >= 1) {
-            hSort(array, h);
+            hSort(arrayEntity.array, h);
             h = h / 3;
         }
+        return arrayEntity;
     }
 
     @Override

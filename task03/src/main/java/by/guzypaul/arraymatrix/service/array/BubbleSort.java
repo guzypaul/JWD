@@ -10,5 +10,5 @@ import by.guzypaul.arraymatrix.service.exception.ServiceException;
 
 public interface BubbleSort {
 
-    void bubbleSort() throws ServiceException;
+    ArrayEntity bubbleSort() throws ServiceException;
 }
