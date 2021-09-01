@@ -36,9 +36,43 @@ public class Country {
         return regionsList;
     }
 
- /*   static Country addCountry() {
+    static String strInput() {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextLine()) {
+            strInput = sc.nextLine();
+        } else {
+            System.out.println("Недопустимый ввод");
+            strInput();
+        }
+        return strInput;
+    }
+
+    static int numInput() {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextInt()) {
+            numInput = sc.nextInt();
+        } else {
+            System.out.println("Недопустимый ввод");
+            numInput();
+        }
+        return numInput;
+    }
+
+    static double doublInput() {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextDouble()) {
+            doublInput = sc.nextDouble();
+        } else {
+            System.out.println("Недопустимый ввод");
+            doublInput();
+        }
+        return doublInput;
+    }
+
+    static Country addCountry() {
         Country country = new Country(null,null,null);
         country.regionsList.add(Region.addRegion());
         return country;
-    }*/
+    }
+
 }
