@@ -1,0 +1,27 @@
+DistrictInfo
+1
+Minsk District
+1
+2500000
+100000
+citiesInfo
+1
+2
+
+
+DistrictInfo
+2
+Brest District
+2
+1500000
+80000
+citiesInfo
+3
+4
+
+
+
+
+
+
+

@@ -1,78 +1,95 @@
 package by.guzypaul.classes.entity;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Objects;
 
 public class Country {
-    static int numInput;
-    static double doublInput;
-    static String strInput;
-    String country, capital;
-    private List<Region> regionsList = new ArrayList<>();
-    private List<District> districtsList = new ArrayList<>();
-    private List<City> citiesList = new ArrayList<>();
+    private long id;
+    private String name;
+    private String capital; //TODO string -> City
+    private long population;
+    private long area;
+    private List<Region> regions;
 
-    Country(String country, String capital) {
-        this.country = country;
+    public Country(long id, String name, String capital, long population, long area, List<Region> regions) {
+        this.id = id;
+        this.name = name;
         this.capital = capital;
+        this.population = population;
+        this.area = area;
+        this.regions = regions;
     }
 
-    Country(List regionsList, List districtsList, List citiesList) {
-        this.regionsList = regionsList;
-        this.districtsList = districtsList;
-        this.citiesList = citiesList;
+    public long getId() {
+        return id;
     }
 
-    String getCountry() {
-        return country;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    String getCapital() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCapital() {
         return capital;
     }
 
-    public List getRegionList() {
-        return regionsList;
+    public void setCapital(String capital) {
+        this.capital = capital;
     }
 
-    static String strInput() {
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextLine()) {
-            strInput = sc.nextLine();
-        } else {
-            System.out.println("Недопустимый ввод");
-            strInput();
-        }
-        return strInput;
+    public long getPopulation() {
+        return population;
     }
 
-    static int numInput() {
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextInt()) {
-            numInput = sc.nextInt();
-        } else {
-            System.out.println("Недопустимый ввод");
-            numInput();
-        }
-        return numInput;
+    public void setPopulation(long population) {
+        this.population = population;
     }
 
-    static double doublInput() {
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextDouble()) {
-            doublInput = sc.nextDouble();
-        } else {
-            System.out.println("Недопустимый ввод");
-            doublInput();
-        }
-        return doublInput;
+    public long getArea() {
+        return area;
     }
 
-    static Country addCountry() {
-        Country country = new Country(null,null,null);
-        country.regionsList.add(Region.addRegion());
-        return country;
+    public void setArea(long area) {
+        this.area = area;
     }
 
+    public List<Region> getRegions() {
+        return regions;
+    }
+
+    public void setRegions(List<Region> regions) {
+        this.regions = regions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Country)) return false;
+        Country country = (Country) o;
+        return getId() == country.getId() && getPopulation() == country.getPopulation() && getArea() == country.getArea() && Objects.equals(getName(), country.getName()) && Objects.equals(getCapital(), country.getCapital()) && Objects.equals(getRegions(), country.getRegions());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getCapital(), getPopulation(), getArea(), getRegions());
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", capital='" + capital + '\'' +
+                ", population=" + population +
+                ", area=" + area +
+                ", regions=" + regions +
+                '}';
+    }
 }

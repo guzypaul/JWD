@@ -1,6 +1,6 @@
 package by.guzypaul.classes.dao.exception;
 
-public class DaoException extends Exception{
+public class DaoException extends RuntimeException{
     public DaoException() {
     }
 

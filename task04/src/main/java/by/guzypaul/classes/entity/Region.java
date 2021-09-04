@@ -1,36 +1,95 @@
 package by.guzypaul.classes.entity;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-class Region {
-    private String region;
-    private double square;
-    private District district;
-    private List<District> districtsList = new ArrayList<>();
+public class Region {
+    private long id;
+    private String name;
+    private String regionCentre; //TODO string -> City
+    private long population;
+    private long area;
+    private List<District> districts;
 
-
-    Region(String region, double square, List districtsList) {
-        this.region = region;
-        this.square = square;
-        this.districtsList = districtsList;
+    public Region(long id, String name, String regionCentre, long population, long area, List<District> districts) {
+        this.id = id;
+        this.name = name;
+        this.regionCentre = regionCentre;
+        this.population = population;
+        this.area = area;
+        this.districts = districts;
     }
 
-    String getRegion() {
-        return region;
+    public long getId() {
+        return id;
     }
 
-    double getSquare() {
-        return square;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    static Region addRegion() {
-        Region region = new Region("", 0, null);
-        System.out.println("Введите область");
-        region.region = Country.strInput();
-        System.out.println("Введите площадь в км2");
-        region.square = Country.doublInput();
-        region.districtsList.add(District.addDistrict());
-        return region;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRegionCentre() {
+        return regionCentre;
+    }
+
+    public void setRegionCentre(String regionCentre) {
+        this.regionCentre = regionCentre;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    public long getArea() {
+        return area;
+    }
+
+    public void setArea(long area) {
+        this.area = area;
+    }
+
+    public List<District> getDistricts() {
+        return districts;
+    }
+
+    public void setDistricts(List<District> districts) {
+        this.districts = districts;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Region)) return false;
+        Region region = (Region) o;
+        return getId() == region.getId() && getPopulation() == region.getPopulation() && getArea() == region.getArea() && Objects.equals(getName(), region.getName()) && Objects.equals(getRegionCentre(), region.getRegionCentre()) && Objects.equals(getDistricts(), region.getDistricts());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getRegionCentre(), getPopulation(), getArea(), getDistricts());
+    }
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", regionCentre='" + regionCentre + '\'' +
+                ", population=" + population +
+                ", area=" + area +
+                ", districts=" + districts +
+                '}';
     }
 }

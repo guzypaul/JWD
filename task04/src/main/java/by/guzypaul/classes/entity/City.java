@@ -1,20 +1,63 @@
 package by.guzypaul.classes.entity;
 
-class City {
-    private String city;
+import java.util.Objects;
 
-    City(String city) {
-        this.city = city;
+public class City {
+    private long id;
+    private String name;
+    private long population;
+
+    public City() {
+    }
+    public City(long id, String name, long population) {
+        this.id = id;
+        this.name = name;
+        this.population = population;
     }
 
-    String getCity() {
-        return city;
+    public long getId() {
+        return id;
     }
 
-    static City addCity() {
-        City city = new City("");
-        System.out.println("Введите город");
-        city.city = Country.strInput();
-        return city;
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof City)) return false;
+        City city = (City) o;
+        return getId() == city.getId() && getPopulation() == city.getPopulation() && Objects.equals(getName(), city.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getPopulation());
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", population=" + population +
+                '}';
     }
 }
