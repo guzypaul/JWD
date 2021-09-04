@@ -1,23 +1,157 @@
 DistrictInfo
 1
-Minsk District
+Brest District
 1
-2500000
-100000
+600000
+10000
 citiesInfo
 1
 2
-
+3
+4
 
 DistrictInfo
 2
 Brest District
-2
-1500000
-80000
+5
+500000
+8000
 citiesInfo
+5
+6
+7
+8
+
+DistrictInfo
 3
+Vitebsk District
+9
+663000
+8970
+citiesInfo
+9
+10
+11
+12
+
+DistrictInfo
 4
+Polotsk District
+13
+312000
+70000
+citiesInfo
+13
+14
+15
+16
+
+DistrictInfo
+5
+Gomel District
+17
+312000
+70000
+citiesInfo
+17
+18
+19
+20
+
+DistrictInfo
+6
+Bobruysk District
+21
+412000
+90000
+citiesInfo
+21
+22
+23
+24
+
+DistrictInfo
+7
+Grodno District
+25
+412000
+90000
+citiesInfo
+25
+26
+27
+28
+
+DistrictInfo
+8
+Lida District
+29
+412000
+90000
+citiesInfo
+29
+30
+31
+32
+
+DistrictInfo
+9
+Minsk District
+33
+2000000
+31000
+citiesInfo
+33
+34
+35
+36
+
+DistrictInfo
+10
+Borisov District
+37
+2000000
+38000
+citiesInfo
+37
+38
+39
+40
+
+DistrictInfo
+11
+Mogilev District
+41
+2000000
+38000
+citiesInfo
+41
+42
+43
+44
+
+DistrictInfo
+12
+Osipovichy District
+45
+1300200
+44000
+citiesInfo
+45
+46
+47
+48
+
+
+
+
+
+
+
+
+
+
+
 
 
 

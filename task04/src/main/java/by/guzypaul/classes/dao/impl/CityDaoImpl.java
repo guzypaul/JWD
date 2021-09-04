@@ -4,7 +4,6 @@ import by.guzypaul.classes.dao.CityDao;
 import by.guzypaul.classes.dao.TextFileReader;
 import by.guzypaul.classes.dao.exception.DaoException;
 import by.guzypaul.classes.entity.City;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

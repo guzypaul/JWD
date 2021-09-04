@@ -6,12 +6,12 @@ import java.util.Objects;
 public class Region {
     private long id;
     private String name;
-    private String regionCentre; //TODO string -> City
+    private City regionCentre;
     private long population;
     private long area;
     private List<District> districts;
 
-    public Region(long id, String name, String regionCentre, long population, long area, List<District> districts) {
+    public Region(long id, String name, City regionCentre, long population, long area, List<District> districts) {
         this.id = id;
         this.name = name;
         this.regionCentre = regionCentre;
@@ -36,11 +36,11 @@ public class Region {
         this.name = name;
     }
 
-    public String getRegionCentre() {
+    public City getRegionCentre() {
         return regionCentre;
     }
 
-    public void setRegionCentre(String regionCentre) {
+    public void setRegionCentre(City regionCentre) {
         this.regionCentre = regionCentre;
     }
 

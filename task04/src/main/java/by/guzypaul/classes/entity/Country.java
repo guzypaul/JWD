@@ -6,12 +6,12 @@ import java.util.Objects;
 public class Country {
     private long id;
     private String name;
-    private String capital; //TODO string -> City
+    private City capital;
     private long population;
     private long area;
     private List<Region> regions;
 
-    public Country(long id, String name, String capital, long population, long area, List<Region> regions) {
+    public Country(long id, String name, City capital, long population, long area, List<Region> regions) {
         this.id = id;
         this.name = name;
         this.capital = capital;
@@ -36,11 +36,11 @@ public class Country {
         this.name = name;
     }
 
-    public String getCapital() {
+    public City getCapital() {
         return capital;
     }
 
-    public void setCapital(String capital) {
+    public void setCapital(City capital) {
         this.capital = capital;
     }
 

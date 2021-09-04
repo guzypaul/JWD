@@ -1,0 +1,66 @@
+RegionInfo
+1
+Brest Region
+1
+1500000
+50000
+districtInfo
+1
+2
+
+RegionInfo
+2
+Vitebsk Region
+9
+1800000
+68000
+districtInfo
+3
+4
+
+RegionInfo
+3
+Gomel Region
+17
+1800000
+66000
+districtInfo
+5
+6
+
+RegionInfo
+4
+Grodno Region
+25
+1800000
+67000
+districtInfo
+7
+8
+
+RegionInfo
+5
+Minsk Region
+33
+2000000
+72000
+districtInfo
+9
+10
+
+RegionInfo
+6
+Mogilev Region
+41
+2000000
+71000
+districtInfo
+11
+12
+
+
+
+
+
+
+
