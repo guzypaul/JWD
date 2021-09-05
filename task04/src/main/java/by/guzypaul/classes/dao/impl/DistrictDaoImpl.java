@@ -19,7 +19,7 @@ public class DistrictDaoImpl implements DistrictDao {
     }
 
     @Override
-    public List<District> findAllDistrict(){
+    public List<District> findAllDistrict() {
         return districts;
     }
 
@@ -34,11 +34,11 @@ public class DistrictDaoImpl implements DistrictDao {
     private List<District> readDistrictData() throws DaoException {
         TextFileReader textFileReader = new TextFileReader();
         List<String> districtsData = textFileReader.readStringsFromFile("districtsInfo.txt");
-        List<District> districts = new ArrayList<>();
+        List<District> districtList = new ArrayList<>();
 
         Iterator<String> districtIterator = districtsData.iterator();
-        while(districtIterator.hasNext()){
-            if(districtIterator.next().equals("DistrictInfo")){
+        while (districtIterator.hasNext()) {
+            if (districtIterator.next().equals("DistrictInfo")) {
                 District district = new District();
                 List<City> cities = new ArrayList<>();
                 district.setId(Long.parseLong(districtIterator.next()));
@@ -48,18 +48,18 @@ public class DistrictDaoImpl implements DistrictDao {
                 district.setPopulation(Long.parseLong(districtIterator.next()));
                 district.setArea(Long.parseLong(districtIterator.next()));
 
-                if(districtIterator.next().equals("citiesInfo")){
-                    while(!districtIterator.next().equals("")){
+                if (districtIterator.next().equals("citiesInfo")) {
+                    while (!districtIterator.next().equals("")) {
                         cities.add(DaoFactory.getInstance().getCityDaoImpl()
                                 .findCityById(Long.parseLong(districtIterator.next())));
                     }
                 }
 
                 district.setCities(cities);
-                districts.add(district);
+                districtList.add(district);
             }
         }
 
-        return districts;
+        return districtList;
     }
 }

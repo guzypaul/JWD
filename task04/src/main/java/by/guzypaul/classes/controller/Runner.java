@@ -8,6 +8,7 @@ import by.guzypaul.classes.entity.City;
 public class Runner {
     public static void main(String[] args) {
 
-        System.out.println(DaoFactory.getInstance().getDistrictDaoImpl().findDistrictById(10));
+        //System.out.println(DaoFactory.getInstance().getDistrictDaoImpl().findDistrictById(10));
+        System.out.println(DaoFactory.getInstance().getRegionDaoImpl().findRegionById(5));
     }
 }
