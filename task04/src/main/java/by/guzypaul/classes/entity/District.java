@@ -1,5 +1,6 @@
 package by.guzypaul.classes.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -10,6 +11,10 @@ public class District {
     private long population;
     private long area;
     private List<City> cities;
+
+    public District() {
+        this.cities = new ArrayList<>();
+    }
 
     public District(long id, String name, City districtCentre, long population, long area, List<City> cities) {
         this.id = id;

@@ -12,7 +12,7 @@ citiesInfo
 
 DistrictInfo
 2
-Brest District
+Baranovichy District
 5
 500000
 8000

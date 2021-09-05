@@ -116,6 +116,7 @@ Zhlobin
 CityInfo
 24
 Petrikov
+20000
 
 CityInfo
 25
