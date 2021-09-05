@@ -5,7 +5,6 @@ import by.guzypaul.classes.dao.TextFileReader;
 import by.guzypaul.classes.dao.exception.DaoException;
 import by.guzypaul.classes.dao.factory.DaoFactory;
 import by.guzypaul.classes.entity.Country;
-import by.guzypaul.classes.entity.District;
 import by.guzypaul.classes.entity.Region;
 
 import java.util.ArrayList;
@@ -45,7 +44,7 @@ public class CountryDaoImpl implements CountryDao {
                 country.setArea(Long.parseLong(countryIterator.next()));
 
                 if (countryIterator.next().equals("regionInfo")) {
-                    while (!countryIterator.next().equals("")) {
+                    while (!countryIterator.next().equals("")) { //TODO hz what do i need to do!
                         regions.add(DaoFactory.getInstance().getRegionDaoImpl()
                                 .findRegionById(Long.parseLong(countryIterator.next())));
                     }
