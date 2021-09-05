@@ -1,9 +1,11 @@
 package by.guzypaul.classes.dao.factory;
 
 import by.guzypaul.classes.dao.CityDao;
+import by.guzypaul.classes.dao.CountryDao;
 import by.guzypaul.classes.dao.DistrictDao;
 import by.guzypaul.classes.dao.RegionDao;
 import by.guzypaul.classes.dao.impl.CityDaoImpl;
+import by.guzypaul.classes.dao.impl.CountryDaoImpl;
 import by.guzypaul.classes.dao.impl.DistrictDaoImpl;
 import by.guzypaul.classes.dao.impl.RegionDaoImpl;
 
@@ -12,9 +14,11 @@ public class DaoFactory {
     private CityDao cityDaoImpl;
     private DistrictDao districtDaoImpl;
     private RegionDao regionDaoImpl;
+    private CountryDao countryDaoImpl;
     private boolean isCityDaoInitialized;
     private boolean isDistrictDaoInitialized;
     private boolean isRegionDaoInitialized;
+    private boolean isCountryDaoInitialized;
 
     private DaoFactory() {
     }
@@ -48,5 +52,14 @@ public class DaoFactory {
         }
 
         return regionDaoImpl;
+    }
+
+    public CountryDao getCountryDaoImpl() {
+        if(!isCountryDaoInitialized){
+            countryDaoImpl = new CountryDaoImpl();
+            isCountryDaoInitialized = true;
+        }
+
+        return countryDaoImpl;
     }
 }

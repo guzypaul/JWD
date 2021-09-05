@@ -1,5 +1,6 @@
 package by.guzypaul.classes.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -10,6 +11,10 @@ public class Country {
     private long population;
     private long area;
     private List<Region> regions;
+
+    public Country() {
+        this.regions = new ArrayList<>();
+    }
 
     public Country(long id, String name, City capital, long population, long area, List<Region> regions) {
         this.id = id;

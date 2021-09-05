@@ -1,0 +1,12 @@
+CountryInfo
+1
+Belarus
+33
+9800200
+200100
+regionInfo
+1
+2
+3
+4
+5
