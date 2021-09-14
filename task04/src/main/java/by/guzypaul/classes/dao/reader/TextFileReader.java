@@ -1,4 +1,4 @@
-package by.guzypaul.classes.dao;
+package by.guzypaul.classes.dao.reader;
 
 import by.guzypaul.classes.dao.exception.DaoException;
 import org.apache.logging.log4j.Level;

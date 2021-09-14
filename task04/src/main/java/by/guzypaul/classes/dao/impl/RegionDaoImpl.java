@@ -1,7 +1,7 @@
 package by.guzypaul.classes.dao.impl;
 
 import by.guzypaul.classes.dao.RegionDao;
-import by.guzypaul.classes.dao.TextFileReader;
+import by.guzypaul.classes.dao.reader.TextFileReader;
 import by.guzypaul.classes.dao.exception.DaoException;
 import by.guzypaul.classes.dao.factory.DaoFactory;
 import by.guzypaul.classes.entity.District;
