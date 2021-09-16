@@ -1,18 +1,13 @@
 package by.guzypaul.demothreads.ex02;
 
 public class Person {
-    private String surname;
+    private String name;
 
-    public Person() {
+    public Person(final String newName) {
+        name = newName;}
+
+    public String getName() {
+        return name;
     }
 
-    public Person(final String newSurname) {surname = newSurname;}
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(final String newSurname) {
-        surname = newSurname;
-    }
 }
