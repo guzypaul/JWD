@@ -1,5 +1,6 @@
 package by.guzypaul.multitreading.entity;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class Matrix {
@@ -13,10 +14,7 @@ public class Matrix {
                 .toArray(int[][]::new);
     }
 
-    public Matrix(int n, int m) throws MatrixException {
-        if (n < 1 || m < 1) {// check input
-            throw new MatrixException();
-        }
+    public Matrix(int n, int m)  {
         matrix = new int[n][m];
     }
 
@@ -26,24 +24,15 @@ public class Matrix {
     }
 
     public int getHorizontalSize() {
-
         return matrix[0].length;
     }
 
-    public int getElement(int i, int j) throws MatrixException {
-        if (checkRange(i, j)) { // check i & j
+    public int getElement(int i, int j) {
             return matrix[i][j];
-        } else {
-            throw new MatrixException();
-        }
     }
 
-    public void setElement(int i, int j, int value) throws MatrixException {
-        if (checkRange(i, j)) {
-            matrix[i][j] = value;
-        } else {
-            throw new MatrixException(String.format("No such element with indexes: i = %d and j = %d", i, j));
-        }
+    public void setElement(int i, int j, int value) {
+        matrix[i][j] = value;
     }
 
     @Override
@@ -63,11 +52,10 @@ public class Matrix {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Matrix)) return false;
-
-        Matrix that = (Matrix) o;
-
-        return Arrays.deepEquals(matrix, that.matrix);
+        if (o == null || getClass() != o.getClass()) return false;
+        Matrix matrix1 = (Matrix) o;
+        return matrix1.getVerticalSize() == this.getVerticalSize()
+                && matrix1.getHorizontalSize() == this.getHorizontalSize() && compareMatrices(matrix1);
     }
 
     @Override
@@ -75,7 +63,19 @@ public class Matrix {
         return Arrays.deepHashCode(matrix);
     }
 
-    private boolean checkRange(int i, int j) {// check matrix range
-        return (i >= 0 && i < matrix.length && j >= 0 && j < matrix[0].length);
+    private boolean compareMatrices(Matrix matrix) {
+        for (int i = 0; i < matrix.getHorizontalSize(); i++) {
+            for (int j = 0; j < matrix.getVerticalSize(); j++) {
+                if (matrix.getElement(i, j) != this.getElement(i, j)) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
+
+//    private boolean checkRange(int i, int j) {// check matrix range
+//        return (i >= 0 && i < matrix.length && j >= 0 && j < matrix[0].length);
+//    }
 }
