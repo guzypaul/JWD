@@ -6,8 +6,6 @@ import by.guzypaul.multitreading.dao.factory.DaoFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class MatrixDiagonalBooleanInserter extends Thread{
     private static final AtomicBoolean IS_BLOCKED = new AtomicBoolean(false);

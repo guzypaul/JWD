@@ -1,6 +1,5 @@
 package by.guzypaul.multitreading.entity;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class Matrix {
