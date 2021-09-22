@@ -30,7 +30,6 @@ public class MatrixDiagonalBooleanInserter extends Thread{
                     IS_BLOCKED.set(true);
                     if (counter.get() < matrixDao.findMatrix().getHorizontalSize()) {
                         matrixDao.setElement(counter.get(), counter.get(), element);
-                        //System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
                         counter.incrementAndGet();
                     }
                     IS_BLOCKED.set(false);

@@ -28,7 +28,6 @@ public class MatrixDiagonalLockInserter extends Thread {
 
                 if (counter.get() < matrixDao.findMatrix().getHorizontalSize()) {
                     matrixDao.setElement(counter.get(), counter.get(), element);
-                    System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
                     counter.incrementAndGet();
                 }
                 LOCK.unlock();

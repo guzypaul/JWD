@@ -5,15 +5,15 @@ import by.guzypaul.multitreading.controller.command.CommandException;
 import by.guzypaul.multitreading.dao.factory.DaoFactory;
 import by.guzypaul.multitreading.service.factory.ServiceFactory;
 import by.guzypaul.multitreading.service.inserter.MatrixDiagonalBooleanInserter;
-import by.guzypaul.multitreading.service.inserter.MatrixDiagonalLockInserter;
+import by.guzypaul.multitreading.service.inserter.MatrixDiagonalSetInserter;
 
-public class MatrixDiagonalLockInserterCommand implements Command {
+public class MatrixDiagonalSetInserterCommand implements Command {
     @Override
     public String execute() throws CommandException {
         try{
-            MatrixDiagonalLockInserter firstThread = new MatrixDiagonalLockInserter(1);
-            MatrixDiagonalLockInserter secondThread = new MatrixDiagonalLockInserter(2);
-            MatrixDiagonalLockInserter thirdThread = new MatrixDiagonalLockInserter(3);
+            MatrixDiagonalSetInserter firstThread = new MatrixDiagonalSetInserter(1);
+            MatrixDiagonalSetInserter secondThread = new MatrixDiagonalSetInserter(2);
+            MatrixDiagonalSetInserter thirdThread = new MatrixDiagonalSetInserter(3);
             System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
 
             firstThread.start();

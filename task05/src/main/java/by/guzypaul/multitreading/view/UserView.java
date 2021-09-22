@@ -33,16 +33,19 @@ public class UserView {
                     System.out.println(response);
                     break;
                 case 2:
-                    response = controller.executeTask("INSERTION_SORT");
-                    logger.log(Level.INFO, "INSERTION_SORT: " + response);
+                    response = controller.executeTask("INSERT_BY_LOCK");
+                    logger.log(Level.INFO, "INSERT_BY_LOCK: " + response);
+                    System.out.println(response);
                     break;
                 case 3:
-                    response = controller.executeTask("SELECTION_SORT");
-                    logger.log(Level.INFO, "SELECTION_SORT: " + response);
+                    response = controller.executeTask("INSERT_BY_QUEUE");
+                    logger.log(Level.INFO, "INSERT_BY_QUEUE: " + response);
+                    System.out.println(response);
                     break;
                 case 4:
-                    response = controller.executeTask("SHAKER_SORT");
-                    logger.log(Level.INFO, "SHAKER_SORT: " + response);
+                    response = controller.executeTask("INSERT_BY_SET");
+                    logger.log(Level.INFO, "INSERT_BY_SET: " + response);
+                    System.out.println(response);
                     break;
 
                 case 5:

@@ -3,6 +3,7 @@ package by.guzypaul.multitreading.controller.command.impl;
 import by.guzypaul.multitreading.controller.command.Command;
 import by.guzypaul.multitreading.controller.command.CommandException;
 import by.guzypaul.multitreading.dao.factory.DaoFactory;
+import by.guzypaul.multitreading.service.factory.ServiceFactory;
 import by.guzypaul.multitreading.service.inserter.MatrixDiagonalBooleanInserter;
 
 public class MatrixDiagonalBooleanInserterCommand implements Command {
@@ -25,7 +26,7 @@ public class MatrixDiagonalBooleanInserterCommand implements Command {
           System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
 
           MatrixDiagonalBooleanInserter.resetCounter();
-
+          ServiceFactory.getInstance().getMatrixService().matrixReset();
           return " Diagonal was filled!";
       } catch (InterruptedException e) {
           throw new CommandException(e.getMessage());

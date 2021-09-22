@@ -5,8 +5,6 @@ import by.guzypaul.multitreading.dao.factory.DaoFactory;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
@@ -32,7 +30,6 @@ public class MatrixDiagonalSetInserter extends Thread {
                 LOCK.lock();
                 if (!replaceableIndexes.add(counter.get())) {
                     matrixDao.setElement(counter.get(), counter.get(), element);
-                    System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
                     replaceableIndexes.remove(counter.get());
                     counter.incrementAndGet();
                 }

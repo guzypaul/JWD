@@ -29,7 +29,6 @@ public class MatrixDiagonalQueueInserter extends Thread {
                 if(!replaceableIndexes.isEmpty()){
                     int replaceableIndex = replaceableIndexes.poll();
                     matrixDao.setElement(replaceableIndex, replaceableIndex, element);
-                    System.out.println(DaoFactory.getInstance().getMatrixDaoImpl().findMatrix());
                     counter.incrementAndGet();
                 }
                 LOCK.unlock();
