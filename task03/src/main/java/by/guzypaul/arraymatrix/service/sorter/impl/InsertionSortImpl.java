@@ -1,11 +1,11 @@
-package by.guzypaul.arraymatrix.service.array.impl;
+package by.guzypaul.arraymatrix.service.sorter.impl;
 
 import by.guzypaul.arraymatrix.dao.ArrayDao;
 import by.guzypaul.arraymatrix.dao.exception.DaoException;
 import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.ArrayEntity;
 import by.guzypaul.arraymatrix.entity.exception.ArrayException;
-import by.guzypaul.arraymatrix.service.array.ArraySorter;
+import by.guzypaul.arraymatrix.service.sorter.ArraySorter;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 
 public class InsertionSortImpl implements ArraySorter {

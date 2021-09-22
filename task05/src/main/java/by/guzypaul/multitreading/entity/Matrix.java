@@ -74,8 +74,4 @@ public class Matrix {
 
         return true;
     }
-
-//    private boolean checkRange(int i, int j) {// check matrix range
-//        return (i >= 0 && i < matrix.length && j >= 0 && j < matrix[0].length);
-//    }
 }

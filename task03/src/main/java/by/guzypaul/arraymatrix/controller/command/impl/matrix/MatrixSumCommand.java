@@ -4,7 +4,7 @@ import by.guzypaul.arraymatrix.controller.Command;
 import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.factory.ServiceFactory;
-import by.guzypaul.arraymatrix.service.matrix.MatrixSum;
+import by.guzypaul.arraymatrix.service.calculator.MatrixSum;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

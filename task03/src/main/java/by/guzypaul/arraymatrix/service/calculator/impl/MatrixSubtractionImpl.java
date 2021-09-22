@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.service.matrix.impl;
+package by.guzypaul.arraymatrix.service.calculator.impl;
 
 import by.guzypaul.arraymatrix.dao.MatrixDao;
 import by.guzypaul.arraymatrix.dao.exception.DaoException;
@@ -6,7 +6,7 @@ import by.guzypaul.arraymatrix.dao.factory.DaoFactory;
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
 import by.guzypaul.arraymatrix.entity.exception.MatrixException;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
-import by.guzypaul.arraymatrix.service.matrix.MatrixSubtraction;
+import by.guzypaul.arraymatrix.service.calculator.MatrixSubtraction;
 
 public class MatrixSubtractionImpl implements MatrixSubtraction {
     @Override

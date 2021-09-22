@@ -1,8 +1,8 @@
 package by.guzypaul.arraymatrix.controller.command.impl.array;
 
 import by.guzypaul.arraymatrix.controller.Command;
-import by.guzypaul.arraymatrix.service.array.ArraySorter;
-import by.guzypaul.arraymatrix.service.array.InsertionSort;
+import by.guzypaul.arraymatrix.service.sorter.ArraySorter;
+import by.guzypaul.arraymatrix.service.sorter.InsertionSort;
 import by.guzypaul.arraymatrix.service.exception.ServiceException;
 import by.guzypaul.arraymatrix.service.factory.ServiceFactory;
 import org.apache.logging.log4j.Level;

@@ -1,4 +1,4 @@
-package by.guzypaul.arraymatrix.service.matrix;
+package by.guzypaul.arraymatrix.service.calculator;
 
 import by.guzypaul.arraymatrix.entity.MatrixEntity;
 import by.guzypaul.arraymatrix.entity.exception.MatrixException;
