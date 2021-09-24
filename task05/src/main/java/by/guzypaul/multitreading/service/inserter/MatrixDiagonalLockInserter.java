@@ -35,7 +35,9 @@ public class MatrixDiagonalLockInserter extends Thread {
                 TimeUnit.MILLISECONDS.sleep(20);
             }
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //todo log error
+        } finally {
+            LOCK.unlock(); //
         }
     }
 

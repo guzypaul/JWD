@@ -9,7 +9,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class MatrixDiagonalQueueInserter extends Thread {
-    private static final Lock LOCK = new ReentrantLock();
+    private static final Lock LOCK = new ReentrantLock(); //todo can get to constructor
     private static BlockingQueue<Integer> replaceableIndexes = fillIndexesQueue();
     private static AtomicInteger counter = new AtomicInteger(0);
     private int element;
@@ -22,7 +22,7 @@ public class MatrixDiagonalQueueInserter extends Thread {
     @Override
     public void run() {
         try {
-            MatrixDao matrixDao = DaoFactory.getInstance().getMatrixDaoImpl();
+            MatrixDao matrixDao = DaoFactory.getInstance().getMatrixDaoImpl(); //todo can get to constructor
             while(!replaceableIndexes.isEmpty()){
                 TimeUnit.MILLISECONDS.sleep(20);
                 LOCK.lock();

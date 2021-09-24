@@ -55,7 +55,7 @@ public class  UserView {
                     logger.log(Level.INFO, "EXIT");
                     break;
                 default:
-                    messagePrinter.printMessage(rb.getString("WRONG_CHOISE"));
+                    messagePrinter.printMessage(rb.getString("WRONG_CHOICE"));
             }
         }
     }
