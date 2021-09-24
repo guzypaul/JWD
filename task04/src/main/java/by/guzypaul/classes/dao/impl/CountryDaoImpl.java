@@ -44,7 +44,7 @@ public class CountryDaoImpl implements CountryDao {
                 country.setArea(Long.parseLong(countryIterator.next()));
 
                 if (countryIterator.next().equals("regionInfo")) {
-                    while (!countryIterator.next().equals("")) { //TODO hz what do i need to do!
+                    while (!countryIterator.next().equals("")) { //TODO
                         regions.add(DaoFactory.getInstance().getRegionDaoImpl()
                                 .findRegionById(Long.parseLong(countryIterator.next())));
                     }

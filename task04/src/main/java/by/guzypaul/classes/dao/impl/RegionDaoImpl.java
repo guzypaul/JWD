@@ -44,7 +44,7 @@ public class RegionDaoImpl implements RegionDao {
                 region.setArea(Long.parseLong(regionIterator.next()));
 
                 if (regionIterator.next().equals("districtInfo")) {
-                    while (!regionIterator.next().equals("")) { //TODO skip one - WTF!
+                    while (!regionIterator.next().equals("")) { //TODO
                         districts.add(DaoFactory.getInstance().getDistrictDaoImpl()
                                 .findDistrictById(Long.parseLong(regionIterator.next())));
                     }

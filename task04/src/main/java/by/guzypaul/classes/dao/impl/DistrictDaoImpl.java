@@ -49,7 +49,7 @@ public class DistrictDaoImpl implements DistrictDao {
                 district.setArea(Long.parseLong(districtIterator.next()));
 
                 if (districtIterator.next().equals("citiesInfo")) {
-                    while (!districtIterator.next().equals("")) { //TODO skip one - WTF!!!
+                    while (!districtIterator.next().equals("")) { //TODO
                         cities.add(DaoFactory.getInstance().getCityDaoImpl()
                                 .findCityById(Long.parseLong(districtIterator.next())));
                     }
