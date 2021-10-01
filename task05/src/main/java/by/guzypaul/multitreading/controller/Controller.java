@@ -1,6 +1,5 @@
 package by.guzypaul.multitreading.controller;
 
-import by.guzypaul.multitreading.controller.command.CommandException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

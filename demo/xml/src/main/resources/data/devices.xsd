@@ -1,0 +1,42 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.training.by/device"
+        xmlns:tns="http://www.training.by/device">
+
+    <element name="notes">
+        <complexType>
+            <sequence>
+                <element name="note" type="tns:Device"
+                         minOccurs="1"
+                         maxOccurs="16" />
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Device">
+        <sequence>
+            <element name="name" type="string" />
+            <element name="price" type="int" />
+            <element name="origin" type="tns:Origin" />
+            <element name="type" type="tns:Type" />
+            <element name="critical" type="boolean" />
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+
+    <complexType name="Type">
+        <sequence>
+            <element name="pereferial" type="boolean" />
+            <element name="electric" type="int" />
+            <element name="culer" type="boolean" />
+            <element name="type" type="tns:Type" />
+            <element name="critical" type="boolean" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="Origin">
+        <restriction base="string">
+            <enumeration value="USA"/>
+            <enumeration value="UK"/>
+            <enumeration value="RU"/>
+        </restriction>
+    </simpleType>
+</schema>

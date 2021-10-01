@@ -1,6 +1,5 @@
 package by.guzypaul.multitreading.controller;
 
-import by.guzypaul.multitreading.controller.command.CommandException;
 import by.guzypaul.multitreading.dao.exception.DaoException;
 import by.guzypaul.multitreading.view.UserLocale;
 import by.guzypaul.multitreading.view.UserView;

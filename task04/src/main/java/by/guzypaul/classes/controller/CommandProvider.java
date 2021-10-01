@@ -1,29 +1,30 @@
 package by.guzypaul.classes.controller;
 
-import by.guzypaul.classes.controller.command.CommandName;
+import by.guzypaul.classes.controller.command.Command;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
-public class CommandProvider {
+public enum CommandProvider {
+//    INSERT_BY_BOOLEAN(new MatrixDiagonalBooleanInserterCommand()),
+//    INSERT_BY_LOCK(new MatrixDiagonalLockInserterCommand()),
+//    INSERT_BY_QUEUE(new MatrixDiagonalQueueInserterCommand()),
+//    INSERT_BY_SET(new MatrixDiagonalSetInserterCommand());
 
-    private Map<CommandName, Command> repository = new HashMap<>();
+    private Command command;
 
-    public CommandProvider() {
-       /* repository.put(CommandName.BUBBLE_SORT, new BubbleSortCommand());
-        repository.put(CommandName.INSERTION_SORT, new InsertionSortCommand());
-        repository.put(CommandName.SELECTION_SORT, new SelectionSortCommand());
-        repository.put(CommandName.SHAKER_SORT, new ShakerSortCommand());
-        repository.put(CommandName.SHELL_SORT, new ShellSortCommand());
-
-        repository.put(CommandName.MATRIX_MULTIPLICATOR, new MatrixMultiplicatorCommand());
-        repository.put(CommandName.MATRIX_SUBTRACTOR, new MatrixSubtractionCommand());
-        repository.put(CommandName.MATRIX_SUM, new MatrixSumCommand());*/
-
+    CommandProvider(Command command) {
+        this.command = command;
     }
 
-    public Command getCommand(String commandName) {
-        Command command = repository.get(commandName);
+    public Command getCommand() {
         return command;
+    }
+
+    public static Command findCommandByName(String name) throws CommandException {
+        return Arrays.stream(CommandProvider.values())
+                .filter(currentCommandType -> currentCommandType.name().equals(name))
+                .map(CommandProvider::getCommand)
+                .findFirst()
+                .orElseThrow(() -> new CommandException("Invalid command name"));
     }
 }

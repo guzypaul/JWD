@@ -1,7 +1,6 @@
 package by.guzypaul.multitreading.controller;
 
 import by.guzypaul.multitreading.controller.command.Command;
-import by.guzypaul.multitreading.controller.command.CommandException;
 import by.guzypaul.multitreading.controller.command.impl.MatrixDiagonalBooleanInserterCommand;
 import by.guzypaul.multitreading.controller.command.impl.MatrixDiagonalLockInserterCommand;
 import by.guzypaul.multitreading.controller.command.impl.MatrixDiagonalQueueInserterCommand;

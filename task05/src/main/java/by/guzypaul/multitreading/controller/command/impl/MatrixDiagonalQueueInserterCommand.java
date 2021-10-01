@@ -1,11 +1,10 @@
 package by.guzypaul.multitreading.controller.command.impl;
 
 import by.guzypaul.multitreading.controller.command.Command;
-import by.guzypaul.multitreading.controller.command.CommandException;
+import by.guzypaul.multitreading.controller.CommandException;
 import by.guzypaul.multitreading.dao.factory.DaoFactory;
 import by.guzypaul.multitreading.service.factory.ServiceFactory;
 import by.guzypaul.multitreading.service.inserter.MatrixDiagonalBooleanInserter;
-import by.guzypaul.multitreading.service.inserter.MatrixDiagonalLockInserter;
 import by.guzypaul.multitreading.service.inserter.MatrixDiagonalQueueInserter;
 
 public class MatrixDiagonalQueueInserterCommand implements Command {

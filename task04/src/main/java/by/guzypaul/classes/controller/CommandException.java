@@ -1,4 +1,4 @@
-package by.guzypaul.multitreading.controller.command;
+package by.guzypaul.classes.controller;
 
 public class CommandException extends Exception{
     public CommandException() {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.training.by/device"
+         xsi:schemaLocation="http://www.training.by/device devices.xsd">
+
+
+    <device model="bla">
+        <name>Monitor</name>>
+        <price>200</price>
+         <origin>UK</origin>
+        <type>
+            <electric>400</electric>
+            <culer>no</culer>
+            <port>USB</port>
+        </type>
+        <critical></critical>
+    </device>
+
+
+</devices>

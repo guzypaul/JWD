@@ -26,8 +26,9 @@ public class  UserView {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    /*response = controller.executeTask("BUBBLE_SORT");
-                    logger.log(Level.INFO, "BUBBLE_SORT: " + response);*/
+//                    response = controller.executeTask("INSERT_BY_BOOLEAN");
+//                    logger.log(Level.INFO, "INSERT_BY_BOOLEANT: " + response);
+//                    System.out.println(response);
                     break;
                 case 2:
 
