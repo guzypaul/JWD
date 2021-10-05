@@ -1,0 +1,40 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.training.by/paper"
+        xmlns:tns="http://www.training.by/paper">
+
+    <element name="notes">
+        <complexType>
+            <sequence>
+                <element name="note" type="tns:Paper"
+                         minOccurs="1"
+                         maxOccurs="16" />
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Paper">
+        <sequence>
+            <element name="title" type="string" />
+            <element name="type" type="tns:Type" />
+            <element name="mothly" type="boolean" />
+            <element name="chars" type="tns:Chars" />
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+
+    <complexType name="Chars">
+        <sequence>
+            <element name="color" type="string" />
+            <element name="volume" type="int" />
+            <element name="gloss" type="boolean" />
+            <element name="index" type="boolean" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="Type">
+        <restriction base="string">
+            <enumeration value="magazine"/>
+            <enumeration value="newspaper"/>
+            <enumeration value="booklet"/>
+        </restriction>
+    </simpleType>
+</schema>

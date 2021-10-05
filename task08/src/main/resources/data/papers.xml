@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.training.by/papers"
+         xsi:schemaLocation="http://www.training.by/device papers.xsd">
+
+
+    <paper>
+        <title>cosmopolitan</title>>
+        <type>magazine</type>
+        <mothly>yes</mothly>
+        <chars>
+            <color>black</color>
+            <volume>300</volume>
+            <gloss>yes</gloss>
+            <index>yes</index>
+        </chars>
+        <critical></critical>
+    </paper>
+</papers>
