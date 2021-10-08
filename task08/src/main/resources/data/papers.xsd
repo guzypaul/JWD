@@ -23,7 +23,7 @@
 
     <complexType name="Chars">
         <sequence>
-            <element name="color" type="string" />
+            <element name="color" type="boolean" />
             <element name="volume" type="int" />
             <element name="gloss" type="boolean" />
             <element name="index" type="boolean" />
