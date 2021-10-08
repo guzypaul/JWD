@@ -37,7 +37,7 @@ public class PaperDomBuilder {
         try {
             doc = docBuilder.parse(filename);
             Element root = doc.getDocumentElement();
-            // getting a list of <student> child elements
+            // getting a list of <paper> child elements
             NodeList papersList = root.getElementsByTagName("paper");
             for (int i = 0; i < papersList.getLength(); i++) {
                 Element paperElement = (Element) papersList.item(i);
@@ -52,6 +52,7 @@ public class PaperDomBuilder {
     private Paper buildPaper(Element paperElement) {
         Paper paper = new Paper();
         // add null check
+        paper.setTitle(getElementTextContent(paperElement, "title"));
         paper.setMonthly(Boolean.parseBoolean(paperElement.getAttribute("monthly")));
         paper.setType(getElementTextContent(paperElement, "type"));
         Paper.Chars chars = paper.getChars();
@@ -62,7 +63,6 @@ public class PaperDomBuilder {
         chars.setVolume(Integer.parseInt(getElementTextContent(charsElement, "volume")));
         chars.setGloss(Boolean.parseBoolean(getElementTextContent(charsElement, "gloss")));
         chars.setIndex(Boolean.parseBoolean(getElementTextContent(charsElement, "index")));
-        paper.setTitle(paperElement.getAttribute("title"));
         return paper;
     }
 

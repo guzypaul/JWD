@@ -48,11 +48,12 @@ public class Paper {
 
     @Override
     public String toString() {
-        return "Paper{" +
-                "title='" + title + '\'' +
-                ", type='" + type + '\'' +
-                ", monthly=" + monthly +
-                '}';
+        return "Paper " + "\n" +
+                "title='" + title + '\'' + "\n" +
+                "type='" + type + '\'' + "\n" +
+                "monthly=" + monthly + "\n" +
+                chars + "\n" +
+                "\n";
     }
 
     public class Chars { // inner class
@@ -105,7 +106,7 @@ public class Paper {
 
         @Override
         public String toString() {
-            return "Chars{" +
+            return "Chars {" +
                     "color=" + color +
                     ", volume=" + volume +
                     ", gloss=" + gloss +

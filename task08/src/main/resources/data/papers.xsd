@@ -2,10 +2,10 @@
         targetNamespace="http://www.training.by/paper"
         xmlns:tns="http://www.training.by/paper">
 
-    <element name="notes">
+    <element name="papers">
         <complexType>
             <sequence>
-                <element name="note" type="tns:Paper"
+                <element name="paper" type="tns:Paper"
                          minOccurs="1"
                          maxOccurs="16" />
             </sequence>
