@@ -5,7 +5,7 @@
 
 
     <paper>
-        <title>cosmopolitan</title>>
+        <title>Cosmopolitan</title>>
         <type>magazine</type>
         <monthly>true</monthly>
         <chars>
@@ -17,7 +17,7 @@
     </paper>
 
     <paper>
-        <title>maxim</title>>
+        <title>Maxim</title>>
         <type>magazine</type>
         <monthly>true</monthly>
         <chars>
@@ -29,7 +29,7 @@
     </paper>
 
     <paper>
-        <title>vogue</title>>
+        <title>Vogue</title>>
         <type>magazine</type>
         <monthly>true</monthly>
         <chars>
@@ -41,7 +41,7 @@
     </paper>
 
     <paper>
-        <title>forbes</title>>
+        <title>Forbes</title>>
         <type>magazine</type>
         <monthly>true</monthly>
         <chars>
@@ -53,7 +53,7 @@
     </paper>
 
     <paper>
-        <title>moto</title>>
+        <title>Moto</title>>
         <type>magazine</type>
         <monthly>true</monthly>
         <chars>
@@ -65,7 +65,7 @@
     </paper>
 
     <paper>
-        <title>the_new_york_times</title>>
+        <title>The New York times</title>>
         <type>newspaper</type>
         <monthly>true</monthly>
         <chars>
@@ -77,7 +77,7 @@
     </paper>
 
     <paper>
-        <title>the_world</title>>
+        <title>The world</title>>
         <type>newspaper</type>
         <monthly>true</monthly>
         <chars>
@@ -89,7 +89,7 @@
     </paper>
 
     <paper>
-        <title>the_times</title>>
+        <title>The times</title>>
         <type>newspaper</type>
         <monthly>true</monthly>
         <chars>
@@ -101,7 +101,7 @@
     </paper>
 
     <paper>
-        <title>the_usa_today</title>>
+        <title>The USA today</title>>
         <type>newspaper</type>
         <monthly>true</monthly>
         <chars>
@@ -113,7 +113,7 @@
     </paper>
 
     <paper>
-        <title>muzyckaya_prauda</title>>
+        <title>Muzyckaya prauda</title>>
         <type>newspaper</type>
         <monthly>false</monthly>
         <chars>
@@ -125,7 +125,7 @@
     </paper>
 
     <paper>
-        <title>industry</title>>
+        <title>Industry</title>>
         <type>booklet</type>
         <monthly>false</monthly>
         <chars>
@@ -137,7 +137,7 @@
     </paper>
 
     <paper>
-        <title>auto</title>>
+        <title>Auto</title>>
         <type>booklet</type>
         <monthly>false</monthly>
         <chars>
@@ -149,7 +149,7 @@
     </paper>
 
     <paper>
-        <title>business</title>>
+        <title>Business</title>>
         <type>booklet</type>
         <monthly>false</monthly>
         <chars>
@@ -161,7 +161,7 @@
     </paper>
 
     <paper>
-        <title>science</title>>
+        <title>Science</title>>
         <type>booklet</type>
         <monthly>false</monthly>
         <chars>
@@ -173,7 +173,7 @@
     </paper>
 
     <paper>
-        <title>weapon</title>>
+        <title>Weapon</title>>
         <type>booklet</type>
         <monthly>false</monthly>
         <chars>

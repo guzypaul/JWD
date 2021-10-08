@@ -1,4 +1,4 @@
-package by.guzypaul.xml.parser;
+package by.guzypaul.xml.service;
 
 import by.guzypaul.xml.entity.Paper;
 import javax.xml.parsers.DocumentBuilder;
@@ -53,7 +53,7 @@ public class PaperDomBuilder {
         Paper paper = new Paper();
         // add null check
         paper.setTitle(getElementTextContent(paperElement, "title"));
-        paper.setMonthly(Boolean.parseBoolean(paperElement.getAttribute("monthly")));
+        paper.setMonthly(Boolean.parseBoolean(getElementTextContent(paperElement, "monthly")));
         paper.setType(getElementTextContent(paperElement, "type"));
         Paper.Chars chars = paper.getChars();
         // init an address object

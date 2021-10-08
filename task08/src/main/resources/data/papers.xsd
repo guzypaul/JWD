@@ -15,7 +15,7 @@
         <sequence>
             <element name="title" type="string" />
             <element name="type" type="tns:Type" />
-            <element name="mothly" type="boolean" />
+            <element name="monthly" type="boolean" />
             <element name="chars" type="tns:Chars" />
         </sequence>
         <attribute name="id" type="int" use="required" />
