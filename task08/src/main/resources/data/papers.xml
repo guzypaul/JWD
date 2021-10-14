@@ -1,186 +1,196 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://www.training.by/papers"
-         xsi:schemaLocation="http://www.training.by/paper papers.xsd">
+        xmlns="http://www.training.by/paper"
+        xsi:schemaLocation="http://www.training.by/paper papers.xsd">
 
-
-    <paper>
-        <title>Cosmopolitan</title>>
-        <type>magazine</type>
-        <monthly>true</monthly>
+    <magazine id="e12">
+        <title>Cosmopolitan</title>
         <chars>
-            <color>true</color>
-            <volume>300</volume>
-            <gloss>true</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
-
-    <paper>
-        <title>Maxim</title>>
-        <type>magazine</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>true</color>
-            <volume>250</volume>
-            <gloss>true</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
-
-    <paper>
-        <title>Vogue</title>>
-        <type>magazine</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>true</color>
+            <is-color>true</is-color>
             <volume>200</volume>
-            <gloss>true</gloss>
-            <index>true</index>
         </chars>
-    </paper>
+        <date_of_print>2021-12-12</date_of_print>
+        <index>132469</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
 
-    <paper>
-        <title>Forbes</title>>
-        <type>magazine</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>true</color>
-            <volume>150</volume>
-            <gloss>true</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Cosmopolitan</title>>-->
+<!--        <type>magazine</type>-->
+<!--        <is-monthly>true</is-monthly>-->
+<!--        <chars>-->
+<!--            <is-color>true</is-color>-->
+<!--            <volume>300</volume>-->
+<!--            <is-gloss>true</is-gloss>-->
+<!--            <index>223366</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Moto</title>>
-        <type>magazine</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>true</color>
-            <volume>100</volume>
-            <gloss>true</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Maxim</title>>-->
+<!--        <type>magazine</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>250</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>The New York times</title>>
-        <type>newspaper</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>false</color>
-            <volume>12</volume>
-            <gloss>false</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Vogue</title>>-->
+<!--        <type>magazine</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>200</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>The world</title>>
-        <type>newspaper</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>false</color>
-            <volume>30</volume>
-            <gloss>false</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Forbes</title>>-->
+<!--        <type>magazine</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>150</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>The times</title>>
-        <type>newspaper</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>false</color>
-            <volume>18</volume>
-            <gloss>false</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Moto</title>>-->
+<!--        <type>magazine</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>100</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>The USA today</title>>
-        <type>newspaper</type>
-        <monthly>true</monthly>
-        <chars>
-            <color>false</color>
-            <volume>22</volume>
-            <gloss>false</gloss>
-            <index>true</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>The New York times</title>>-->
+<!--        <type>newspaper</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>false</color>-->
+<!--            <volume>12</volume>-->
+<!--            <gloss>false</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Muzyckaya prauda</title>>
-        <type>newspaper</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>false</color>
-            <volume>10</volume>
-            <gloss>false</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>The world</title>>-->
+<!--        <type>newspaper</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>false</color>-->
+<!--            <volume>30</volume>-->
+<!--            <gloss>false</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Industry</title>>
-        <type>booklet</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>true</color>
-            <volume>1</volume>
-            <gloss>true</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>The times</title>>-->
+<!--        <type>newspaper</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>false</color>-->
+<!--            <volume>18</volume>-->
+<!--            <gloss>false</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Auto</title>>
-        <type>booklet</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>true</color>
-            <volume>1</volume>
-            <gloss>true</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>The USA today</title>>-->
+<!--        <type>newspaper</type>-->
+<!--        <monthly>true</monthly>-->
+<!--        <chars>-->
+<!--            <color>false</color>-->
+<!--            <volume>22</volume>-->
+<!--            <gloss>false</gloss>-->
+<!--            <index>true</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Business</title>>
-        <type>booklet</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>true</color>
-            <volume>1</volume>
-            <gloss>true</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Muzyckaya prauda</title>>-->
+<!--        <type>newspaper</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>false</color>-->
+<!--            <volume>10</volume>-->
+<!--            <gloss>false</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Science</title>>
-        <type>booklet</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>true</color>
-            <volume>4</volume>
-            <gloss>true</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Industry</title>>-->
+<!--        <type>booklet</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>1</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 
-    <paper>
-        <title>Weapon</title>>
-        <type>booklet</type>
-        <monthly>false</monthly>
-        <chars>
-            <color>true</color>
-            <volume>2</volume>
-            <gloss>true</gloss>
-            <index>false</index>
-        </chars>
-    </paper>
+<!--    <paper>-->
+<!--        <title>Auto</title>>-->
+<!--        <type>booklet</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>1</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
+
+<!--    <paper>-->
+<!--        <title>Business</title>>-->
+<!--        <type>booklet</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>1</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
+
+<!--    <paper>-->
+<!--        <title>Science</title>>-->
+<!--        <type>booklet</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>4</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
+
+<!--    <paper>-->
+<!--        <title>Weapon</title>>-->
+<!--        <type>booklet</type>-->
+<!--        <monthly>false</monthly>-->
+<!--        <chars>-->
+<!--            <color>true</color>-->
+<!--            <volume>2</volume>-->
+<!--            <gloss>true</gloss>-->
+<!--            <index>false</index>-->
+<!--        </chars>-->
+<!--    </paper>-->
 </papers>

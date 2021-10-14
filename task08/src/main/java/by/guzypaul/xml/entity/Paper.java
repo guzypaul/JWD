@@ -1,18 +1,30 @@
 package by.guzypaul.xml.entity;
 
-public class Paper {
+import java.time.LocalDate;
+import java.util.Objects;
+
+public abstract class Paper {
+    private String id;
     private String title;
-    private String type;
-    private boolean monthly;
-    private Chars chars = new Chars();
+    private Chars chars;
+    private LocalDate dateOfPrint;
 
     public Paper() {
     }
 
-    public Paper(String title, String type, boolean monthly) {
+    public Paper(String id, String title, Chars chars, LocalDate dateOfPrint) {
+        this.id = id;
         this.title = title;
-        this.type = type;
-        this.monthly = monthly;
+        this.chars = chars;
+        this.dateOfPrint = dateOfPrint;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -23,95 +35,42 @@ public class Paper {
         this.title = title;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public boolean isMonthly() {
-        return monthly;
-    }
-
-    public void setMonthly(boolean monthly) {
-        this.monthly = monthly;
-    }
-
     public Chars getChars() {
         return chars;
     }
+
     public void setChars(Chars chars) {
         this.chars = chars;
     }
 
-    @Override
-    public String toString() {
-        return "Paper " + "\n" +
-                "title='" + title + '\'' + "\n" +
-                "type='" + type + '\'' + "\n" +
-                "monthly=" + monthly + "\n" +
-                chars + "\n" +
-                "\n";
+    public LocalDate getDateOfPrint() {
+        return dateOfPrint;
     }
 
-    public class Chars { // inner class
-        private boolean color;
-        private int volume;
-        private boolean gloss;
-        private boolean index;
+    public void setDateOfPrint(LocalDate dateOfPrint) {
+        this.dateOfPrint = dateOfPrint;
+    }
 
-        public Chars() {
-        }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Paper)) return false;
+        Paper paper = (Paper) o;
+        return Objects.equals(getId(), paper.getId()) && Objects.equals(getTitle(), paper.getTitle()) && Objects.equals(getChars(), paper.getChars()) && Objects.equals(getDateOfPrint(), paper.getDateOfPrint());
+    }
 
-        public Chars(boolean color, int volume, boolean gloss, boolean index) {
-            this.color = color;
-            this.volume = volume;
-            this.gloss = gloss;
-            this.index = index;
-        }
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getTitle(), getChars(), getDateOfPrint());
+    }
 
-        public boolean isColor() {
-            return color;
-        }
-
-        public void setColor(boolean color) {
-            this.color = color;
-        }
-
-        public int getVolume() {
-            return volume;
-        }
-
-        public void setVolume(int volume) {
-            this.volume = volume;
-        }
-
-        public boolean isGloss() {
-            return gloss;
-        }
-
-        public void setGloss(boolean gloss) {
-            this.gloss = gloss;
-        }
-
-        public boolean isIndex() {
-            return index;
-        }
-
-        public void setIndex(boolean index) {
-            this.index = index;
-        }
-
-        @Override
-        public String toString() {
-            return "Chars {" +
-                    "color=" + color +
-                    ", volume=" + volume +
-                    ", gloss=" + gloss +
-                    ", index=" + index +
-                    '}';
-        }
+    @Override
+    public String toString() {
+        return "Paper{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", chars=" + chars +
+                ", dateOfPrint=" + dateOfPrint +
+                '}';
     }
 }

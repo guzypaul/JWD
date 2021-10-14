@@ -1,40 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified"
         targetNamespace="http://www.training.by/paper"
         xmlns:tns="http://www.training.by/paper">
 
     <element name="papers">
         <complexType>
             <sequence>
-                <element name="paper" type="tns:Paper"
-                         minOccurs="1"
-                         maxOccurs="16" />
+                <element ref="tns:paper"
+                         maxOccurs="16"/>
             </sequence>
         </complexType>
     </element>
+
+    <element name="paper" type="tns:Paper" abstract="true"/>
+    <element name="newspaper" type="tns:Newspaper" substitutionGroup="tns:paper"/>
+    <element name="booklet" type="tns:Booklet" substitutionGroup="tns:paper"/>
+    <element name="magazine" type="tns:Magazine" substitutionGroup="tns:paper"/>
+
     <complexType name="Paper">
         <sequence>
-            <element name="title" type="string" />
-            <element name="type" type="tns:Type" />
-            <element name="monthly" type="boolean" />
-            <element name="chars" type="tns:Chars" />
+            <element name="title" type="string"/>
+            <element name="chars" type="tns:Chars"/>
+            <element name="date_of_print" type="date"/>
         </sequence>
-        <attribute name="id" type="int" use="required" />
+        <attribute name="id" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="e\d{2,6}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="Newspaper">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="index" type="int"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Magazine">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="index" type="int"/>
+                    <element name="is-gloss" type="boolean"/>
+                </sequence>
+                <attribute name="ganre" use="optional" default="info">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="sport"/>
+                            <enumeration value="science"/>
+                            <enumeration value="entertainment"/>
+                            <enumeration value="business"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Booklet">
+        <complexContent>
+            <extension base="tns:Paper">
+                <sequence>
+                    <element name="is-gloss" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
     </complexType>
 
     <complexType name="Chars">
         <sequence>
-            <element name="color" type="boolean" />
-            <element name="volume" type="int" />
-            <element name="gloss" type="boolean" />
-            <element name="index" type="boolean" />
+            <element name="is-color" type="boolean"/>
+            <element name="volume" type="int"/>
         </sequence>
     </complexType>
 
-    <simpleType name="Type">
-        <restriction base="string">
-            <enumeration value="magazine"/>
-            <enumeration value="newspaper"/>
-            <enumeration value="booklet"/>
-        </restriction>
-    </simpleType>
 </schema>
