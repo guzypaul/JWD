@@ -6,17 +6,19 @@ import java.util.Objects;
 public abstract class Paper {
     private String id;
     private String title;
-    private Chars chars;
+    private boolean isMonthly;
     private LocalDate dateOfPrint;
+    private Chars chars;
 
     public Paper() {
     }
 
-    public Paper(String id, String title, Chars chars, LocalDate dateOfPrint) {
+    public Paper(String id, String title, boolean isMonthly, LocalDate dateOfPrint, Chars chars) {
         this.id = id;
         this.title = title;
-        this.chars = chars;
+        this.isMonthly = isMonthly;
         this.dateOfPrint = dateOfPrint;
+        this.chars = chars;
     }
 
     public String getId() {
@@ -25,6 +27,14 @@ public abstract class Paper {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public boolean isMonthly() {
+        return isMonthly;
+    }
+
+    public void setMonthly(boolean monthly) {
+        isMonthly = monthly;
     }
 
     public String getTitle() {
@@ -56,12 +66,16 @@ public abstract class Paper {
         if (this == o) return true;
         if (!(o instanceof Paper)) return false;
         Paper paper = (Paper) o;
-        return Objects.equals(getId(), paper.getId()) && Objects.equals(getTitle(), paper.getTitle()) && Objects.equals(getChars(), paper.getChars()) && Objects.equals(getDateOfPrint(), paper.getDateOfPrint());
+        return isMonthly() == paper.isMonthly() && Objects.equals(getId(),
+                paper.getId()) && Objects.equals(getTitle(),
+                paper.getTitle()) && Objects.equals(getDateOfPrint(),
+                paper.getDateOfPrint()) && Objects.equals(getChars(),
+                paper.getChars());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getChars(), getDateOfPrint());
+        return Objects.hash(getId(), getTitle(), isMonthly(), getDateOfPrint(), getChars());
     }
 
     @Override
@@ -69,8 +83,9 @@ public abstract class Paper {
         return "Paper{" +
                 "id='" + id + '\'' +
                 ", title='" + title + '\'' +
-                ", chars=" + chars +
+                ", isMonthly=" + isMonthly +
                 ", dateOfPrint=" + dateOfPrint +
+                ", chars=" + chars +
                 '}';
     }
 }

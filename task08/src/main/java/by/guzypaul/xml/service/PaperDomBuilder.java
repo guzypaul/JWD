@@ -1,16 +1,22 @@
 package by.guzypaul.xml.service;
 
+import by.guzypaul.xml.entity.Chars;
+import by.guzypaul.xml.entity.Newspaper;
 import by.guzypaul.xml.entity.Paper;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
 import java.io.IOException;
 
 public class PaperDomBuilder {
@@ -50,19 +56,23 @@ public class PaperDomBuilder {
     }
 
     private Paper buildPaper(Element paperElement) {
-        Paper paper = new Paper();
-        // add null check
+        Paper paper = new Newspaper();
+        Chars chars = new Chars();
+
+        paper.setId(String.valueOf(getElementTextContent(paperElement, "id")));
         paper.setTitle(getElementTextContent(paperElement, "title"));
-        paper.setMonthly(Boolean.parseBoolean(getElementTextContent(paperElement, "monthly")));
-        paper.setType(getElementTextContent(paperElement, "type"));
-        Paper.Chars chars = paper.getChars();
-        // init an address object
+        paper.setMonthly(Boolean.parseBoolean(getElementTextContent(paperElement, "is-monthly")));
+        paper.setDateOfPrint(LocalDate.parse(getElementTextContent(paperElement, "date_of_print")));
+
+        //paper.setType(getElementTextContent(paperElement, "type"));
+        //Chars chars = getChars();
+
         Element charsElement =
                 (Element) paperElement.getElementsByTagName("chars").item(0);
-        chars.setColor(Boolean.parseBoolean(getElementTextContent(charsElement, "color")));
+        chars.setColor(Boolean.parseBoolean(getElementTextContent(charsElement, "is-color")));
         chars.setVolume(Integer.parseInt(getElementTextContent(charsElement, "volume")));
-        chars.setGloss(Boolean.parseBoolean(getElementTextContent(charsElement, "gloss")));
-        chars.setIndex(Boolean.parseBoolean(getElementTextContent(charsElement, "index")));
+        //chars.setGloss(Boolean.parseBoolean(getElementTextContent(charsElement, "gloss")));
+        //chars.setIndex(Boolean.parseBoolean(getElementTextContent(charsElement, "index")));
         return paper;
     }
 

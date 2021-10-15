@@ -3,12 +3,13 @@
         xmlns="http://www.training.by/paper"
         xsi:schemaLocation="http://www.training.by/paper papers.xsd">
 
-    <magazine id="e12">
+    <magazine id="e10">
         <title>Cosmopolitan</title>
         <chars>
             <is-color>true</is-color>
             <volume>200</volume>
         </chars>
+        <is-monthly>true</is-monthly>
         <date_of_print>2021-12-12</date_of_print>
         <index>132469</index>
         <is-gloss>true</is-gloss>

@@ -13,8 +13,8 @@ public class Newspaper extends Paper{
         this.index = index;
     }
 
-    public Newspaper(String id, String title, Chars chars, LocalDate dateOfPrint, int index) {
-        super(id, title, chars, dateOfPrint);
+    public Newspaper(String id, String title, boolean isMonthly, LocalDate dateOfPrint, Chars chars, int index) {
+        super(id, title, isMonthly, dateOfPrint, chars);
         this.index = index;
     }
 

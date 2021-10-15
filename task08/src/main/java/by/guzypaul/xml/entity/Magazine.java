@@ -15,8 +15,8 @@ public class Magazine extends Paper{
         this.isGloss = isGloss;
     }
 
-    public Magazine(String id, String title, Chars chars, LocalDate dateOfPrint, int index, boolean isGloss) {
-        super(id, title, chars, dateOfPrint);
+    public Magazine(String id, String title, boolean isMonthly, LocalDate dateOfPrint, Chars chars, int index, boolean isGloss) {
+        super(id, title, isMonthly, dateOfPrint, chars);
         this.index = index;
         this.isGloss = isGloss;
     }

@@ -9,8 +9,8 @@ public class Booklet extends Paper{
     public Booklet() {
     }
 
-    public Booklet(String id, String title, Chars chars, LocalDate dateOfPrint, boolean isGloss) {
-        super(id, title, chars, dateOfPrint);
+    public Booklet(String id, String title, boolean isMonthly, LocalDate dateOfPrint, Chars chars, boolean isGloss) {
+        super(id, title, isMonthly, dateOfPrint, chars);
         this.isGloss = isGloss;
     }
 
