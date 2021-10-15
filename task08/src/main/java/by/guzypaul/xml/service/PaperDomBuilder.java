@@ -1,6 +1,7 @@
 package by.guzypaul.xml.service;
 
 import by.guzypaul.xml.entity.Chars;
+import by.guzypaul.xml.entity.Magazine;
 import by.guzypaul.xml.entity.Newspaper;
 import by.guzypaul.xml.entity.Paper;
 
@@ -56,10 +57,10 @@ public class PaperDomBuilder {
     }
 
     private Paper buildPaper(Element paperElement) {
-        Paper paper = new Newspaper();
+        Paper paper = new Magazine();
         Chars chars = new Chars();
 
-        paper.setId(String.valueOf(getElementTextContent(paperElement, "id")));
+        paper.setId(paperElement.getAttribute("id"));
         paper.setTitle(getElementTextContent(paperElement, "title"));
         paper.setMonthly(Boolean.parseBoolean(getElementTextContent(paperElement, "is-monthly")));
         paper.setDateOfPrint(LocalDate.parse(getElementTextContent(paperElement, "date_of_print")));

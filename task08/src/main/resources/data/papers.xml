@@ -15,183 +15,173 @@
         <is-gloss>true</is-gloss>
     </magazine>
 
-<!--    <paper>-->
-<!--        <title>Cosmopolitan</title>>-->
-<!--        <type>magazine</type>-->
-<!--        <is-monthly>true</is-monthly>-->
-<!--        <chars>-->
-<!--            <is-color>true</is-color>-->
-<!--            <volume>300</volume>-->
-<!--            <is-gloss>true</is-gloss>-->
-<!--            <index>223366</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <magazine id="e11">
+        <title>Forbes</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>170</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>2021-11-11</date_of_print>
+        <index>326578</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
 
-<!--    <paper>-->
-<!--        <title>Maxim</title>>-->
-<!--        <type>magazine</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>250</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <magazine id="e12">
+        <title>maxim</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>250</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>20021-11-13</date_of_print>
+        <index>785621</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
 
-<!--    <paper>-->
-<!--        <title>Vogue</title>>-->
-<!--        <type>magazine</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>200</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <magazine id="e13">
+        <title>Vogue</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>198</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>20021-10-23</date_of_print>
+        <index>658921</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
 
-<!--    <paper>-->
-<!--        <title>Forbes</title>>-->
-<!--        <type>magazine</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>150</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <magazine id="e14">
+        <title>MotoGP</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>130</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-09-23</date_of_print>
+        <index>111156</index>
+        <is-gloss>false</is-gloss>
+    </magazine>
 
-<!--    <paper>-->
-<!--        <title>Moto</title>>-->
-<!--        <type>magazine</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>100</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <newspaper id="e21">
+        <title>The New York times</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>24</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>2021-11-26</date_of_print>
+        <index>232323</index>
+    </newspaper>
 
-<!--    <paper>-->
-<!--        <title>The New York times</title>>-->
-<!--        <type>newspaper</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>false</color>-->
-<!--            <volume>12</volume>-->
-<!--            <gloss>false</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <newspaper id="e22">
+        <title>The world</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>22</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>2021-01-21</date_of_print>
+        <index>363696</index>
+    </newspaper>
 
-<!--    <paper>-->
-<!--        <title>The world</title>>-->
-<!--        <type>newspaper</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>false</color>-->
-<!--            <volume>30</volume>-->
-<!--            <gloss>false</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <newspaper id="e23">
+        <title>The times</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>20</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-08-12</date_of_print>
+        <index>554499</index>
+    </newspaper>
 
-<!--    <paper>-->
-<!--        <title>The times</title>>-->
-<!--        <type>newspaper</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>false</color>-->
-<!--            <volume>18</volume>-->
-<!--            <gloss>false</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <newspaper id="e24">
+        <title>The USA today</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>18</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-08-14</date_of_print>
+        <index>554498</index>
+    </newspaper>
 
-<!--    <paper>-->
-<!--        <title>The USA today</title>>-->
-<!--        <type>newspaper</type>-->
-<!--        <monthly>true</monthly>-->
-<!--        <chars>-->
-<!--            <color>false</color>-->
-<!--            <volume>22</volume>-->
-<!--            <gloss>false</gloss>-->
-<!--            <index>true</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <newspaper id="e25">
+        <title>Muzyckaya prauda</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>10</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>1862-08-14</date_of_print>
+        <index>000001</index>
+    </newspaper>
 
-<!--    <paper>-->
-<!--        <title>Muzyckaya prauda</title>>-->
-<!--        <type>newspaper</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>false</color>-->
-<!--            <volume>10</volume>-->
-<!--            <gloss>false</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e31">
+        <title>Industry</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-02-15</date_of_print>
+        <is-gloss>true</is-gloss>
+    </booklet>
 
-<!--    <paper>-->
-<!--        <title>Industry</title>>-->
-<!--        <type>booklet</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>1</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e32">
+        <title>Auto</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>4</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-02-16</date_of_print>
+        <is-gloss>true</is-gloss>
+    </booklet>
 
-<!--    <paper>-->
-<!--        <title>Auto</title>>-->
-<!--        <type>booklet</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>1</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e33">
+        <title>Business</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-02-16</date_of_print>
+        <is-gloss>true</is-gloss>
+    </booklet>
 
-<!--    <paper>-->
-<!--        <title>Business</title>>-->
-<!--        <type>booklet</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>1</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e34">
+        <title>Science</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date_of_print>2021-02-22</date_of_print>
+        <is-gloss>true</is-gloss>
+    </booklet>
 
-<!--    <paper>-->
-<!--        <title>Science</title>>-->
-<!--        <type>booklet</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>4</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e35">
+        <title>Weapon</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>1</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-03-15</date_of_print>
+        <is-gloss>true</is-gloss>
+    </booklet>
 
-<!--    <paper>-->
-<!--        <title>Weapon</title>>-->
-<!--        <type>booklet</type>-->
-<!--        <monthly>false</monthly>-->
-<!--        <chars>-->
-<!--            <color>true</color>-->
-<!--            <volume>2</volume>-->
-<!--            <gloss>true</gloss>-->
-<!--            <index>false</index>-->
-<!--        </chars>-->
-<!--    </paper>-->
+    <booklet id="e36">
+        <title>Moto</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>1</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date_of_print>2021-04-16</date_of_print>
+        <is-gloss>false</is-gloss>
+    </booklet>
+
 </papers>
