@@ -24,14 +24,14 @@ public class PaperDomBuilder {
     private Set<Paper> papers;
     private DocumentBuilder docBuilder;
 
-    public PaperDomBuilder() {
+    public PaperDomBuilder() throws ServiceException {
         papers = new HashSet<>();
         // configuration
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
-            e.printStackTrace(); // log
+            throw new ServiceException(e);
         }
     }
 
