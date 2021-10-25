@@ -80,7 +80,7 @@ public abstract class Paper {
 
     @Override
     public String toString() {
-        return "Paper{" +
+        return "\nPaper{" +
                 "id='" + id + '\'' +
                 ", title='" + title + '\'' +
                 ", isMonthly=" + isMonthly +

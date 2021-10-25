@@ -23,7 +23,7 @@
             <element name="title" type="string"/>
             <element name="chars" type="tns:Chars"/>
             <element name="is-monthly" type="boolean"/>
-            <element name="date_of_print" type="date"/>
+            <element name="date-of-print" type="date"/>
         </sequence>
         <attribute name="id" use="required">
             <simpleType>
@@ -51,7 +51,7 @@
                     <element name="index" type="int"/>
                     <element name="is-gloss" type="boolean"/>
                 </sequence>
-                <attribute name="ganre" use="optional" default="info">
+                <attribute name="genre" use="optional" default="info">
                     <simpleType>
                         <restriction base="string">
                             <enumeration value="sport"/>
