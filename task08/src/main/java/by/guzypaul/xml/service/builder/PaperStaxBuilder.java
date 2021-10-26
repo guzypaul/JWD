@@ -52,12 +52,62 @@ public class PaperStaxBuilder {
         }
     }
 
-    private Newspaper buildNewspaper(XMLStreamReader reader) { //todo
-        return null;
+    private Newspaper buildNewspaper(XMLStreamReader reader) throws XMLStreamException, ServiceException {
+        Newspaper newspaper = new Newspaper();
+        newspaper.setId(reader.getAttributeValue(null, PaperTagEnum.ID.getTagName()));
+
+        while (reader.hasNext()) {
+            int type = reader.next();
+            switch (type) {
+                case XMLStreamReader.START_ELEMENT:
+                    PaperTagEnum paperTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    if (paperTag == PaperTagEnum.INDEX) {
+                        newspaper.setIndex(Integer.parseInt(getXMLText(reader)));
+                    } else {
+                        buildPaper(paperTag, newspaper, reader);
+                    }
+                    break;
+
+                case XMLStreamReader.END_ELEMENT:
+                    PaperTagEnum paperEnumTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    if (paperEnumTag == PaperTagEnum.NEWSPAPER) {
+                        return newspaper;
+                    }
+            }
+        }
+
+        throw new ServiceException("No element");
     }
 
-    private Magazine buildMagazine(XMLStreamReader reader) { //todo
-        return null;
+    private Magazine buildMagazine(XMLStreamReader reader) throws XMLStreamException, ServiceException {
+        Magazine magazine = new Magazine();
+        magazine.setId(reader.getAttributeValue(null, PaperTagEnum.ID.getTagName()));
+
+        while (reader.hasNext()) {
+            int type = reader.next();
+            switch (type) {
+                case XMLStreamReader.START_ELEMENT:
+                    PaperTagEnum paperTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    if (paperTag == PaperTagEnum.IS_GLOSS) {
+                        magazine.setGloss(Boolean.parseBoolean(getXMLText(reader)));
+                    } else if (paperTag == PaperTagEnum.INDEX) {
+                        magazine.setIndex(Integer.parseInt(getXMLText(reader)));
+                    } else if (paperTag == PaperTagEnum.GENRE) {
+                        magazine.setGenre(getXMLText(reader));
+                    } else {
+                        buildPaper(paperTag, magazine, reader);
+                    }
+                    break;
+
+                case XMLStreamReader.END_ELEMENT:
+                    PaperTagEnum paperEnumTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    if (paperEnumTag == PaperTagEnum.MAGAZINE) {
+                        return magazine;
+                    }
+            }
+        }
+
+        throw new ServiceException("No element");
     }
 
     private Booklet buildBooklet(XMLStreamReader reader) throws XMLStreamException, ServiceException {
@@ -102,13 +152,24 @@ public class PaperStaxBuilder {
                 break;
 
             case CHARS:
-                paper.setChars(buildChars(paperTag));
+                paper.setChars(buildChars(paperTag, reader));
                 break;
         }
     }
 
-    private Chars buildChars(PaperTagEnum paperTag) { //todo
-        return null;
+    private Chars buildChars(PaperTagEnum paperTag, XMLStreamReader reader) throws XMLStreamException { //todo
+        Chars chars = new Chars();
+        switch (paperTag) {
+            case VOLUME:
+                chars.setVolume(Integer.parseInt(getXMLText(reader)));
+                break;
+
+            case IS_COLOR:
+                chars.setColor(Boolean.parseBoolean(getXMLText(reader)));
+                break;
+        }
+
+        return chars;
     }
 
     private String getXMLText(XMLStreamReader reader) throws XMLStreamException {
