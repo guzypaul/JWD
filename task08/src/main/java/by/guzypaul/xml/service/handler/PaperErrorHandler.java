@@ -1,4 +1,4 @@
-package by.guzypaul.xml.handler;
+package by.guzypaul.xml.service.handler;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

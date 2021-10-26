@@ -1,4 +1,4 @@
-package by.guzypaul.xml.handler;
+package by.guzypaul.xml.service.handler;
 
 public enum PaperXmlTag {
 

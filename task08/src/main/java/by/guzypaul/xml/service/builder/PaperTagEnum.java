@@ -17,7 +17,8 @@ public enum PaperTagEnum {
     INDEX("index"),
     IS_GLOSS("is-gloss"),
     DATE_OF_PRINT("date-of-print"),
-    GENRE("genre");
+    GENRE("genre"),
+    PAPERS("papers");
 
     private String tagName;
 

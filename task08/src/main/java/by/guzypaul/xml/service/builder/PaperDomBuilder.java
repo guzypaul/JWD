@@ -19,24 +19,18 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 
-public class PaperDomBuilder {
+public class PaperDomBuilder extends PaperBuilder {
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private Set<Paper> papers;
     private DocumentBuilder docBuilder;
 
     public PaperDomBuilder() throws ServiceException {
-        papers = new HashSet<>();
-        // configuration
+        super();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             throw new ServiceException(e);
         }
-    }
-
-    public Set<Paper> getPapers() {
-        return papers;
     }
 
     public void buildSetPapers(String filePath) throws ServiceException {
@@ -52,19 +46,19 @@ public class PaperDomBuilder {
             for (int i = 0; i < bookletList.getLength(); i++) {
                 Element paperElement = (Element) bookletList.item(i);
                 Booklet booklet = buildBooklet(paperElement);
-                papers.add(booklet);
+                getPapers().add(booklet);
             }
 
             for (int i = 0; i < newspaperList.getLength(); i++) {
                 Element paperElement = (Element) newspaperList.item(i);
                 Newspaper newspaper = buildNewspaper(paperElement);
-                papers.add(newspaper);
+                getPapers().add(newspaper);
             }
 
             for (int i = 0; i < magazineList.getLength(); i++) {
                 Element paperElement = (Element) magazineList.item(i);
                 Magazine magazine = buildMagazine(paperElement);
-                papers.add(magazine);
+                getPapers().add(magazine);
             }
 
         } catch (IOException | SAXException e) {

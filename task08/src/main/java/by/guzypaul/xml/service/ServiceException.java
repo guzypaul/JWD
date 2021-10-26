@@ -1,6 +1,6 @@
 package by.guzypaul.xml.service;
 
-public class ServiceException extends Exception {
+public class ServiceException extends RuntimeException {
     public ServiceException() {
     }
 

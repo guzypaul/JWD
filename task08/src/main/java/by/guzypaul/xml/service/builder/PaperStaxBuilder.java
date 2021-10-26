@@ -14,19 +14,15 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PaperStaxBuilder {
+public class PaperStaxBuilder extends PaperBuilder{
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private Set<Paper> papers; // todo to abstract
     private XMLInputFactory inputFactory;
 
     public PaperStaxBuilder() {
+        super();
         inputFactory = XMLInputFactory.newInstance();
-        papers = new HashSet<>();
     }
 
-    public Set<Paper> getPapers() { // todo to abstract
-        return papers;
-    }
 
     public void buildSetPapers(String filePath) throws ServiceException { // todo to abstract
         try (FileInputStream inputStream = new FileInputStream(new File(filePath))) {
@@ -37,13 +33,13 @@ public class PaperStaxBuilder {
                 if (type == XMLStreamReader.START_ELEMENT) {
                     if (PaperTagEnum.BOOKLET.getTagName().equals(reader.getLocalName())) {
                         Booklet booklet = buildBooklet(reader);
-                        papers.add(booklet);
+                        getPapers().add(booklet);
                     } else if (PaperTagEnum.MAGAZINE.getTagName().equals(reader.getLocalName())) {
                         Magazine magazine = buildMagazine(reader);
-                        papers.add(magazine);
+                        getPapers().add(magazine);
                     } else if (PaperTagEnum.NEWSPAPER.getTagName().equals(reader.getLocalName())) {
                         Newspaper newspaper = buildNewspaper(reader);
-                        papers.add(newspaper);
+                        getPapers().add(newspaper);
                     }
                 }
             }
@@ -156,7 +152,7 @@ public class PaperStaxBuilder {
         }
     }
 
-    private Chars buildChars(XMLStreamReader reader) throws XMLStreamException, ServiceException { //todo
+    private Chars buildChars(XMLStreamReader reader) throws XMLStreamException, ServiceException {
         Chars chars = new Chars();
 
         while (reader.hasNext()) {

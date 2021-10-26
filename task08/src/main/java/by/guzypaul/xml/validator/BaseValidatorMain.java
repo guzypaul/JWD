@@ -6,7 +6,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import by.guzypaul.xml.handler.PaperErrorHandler;
+import by.guzypaul.xml.service.handler.PaperErrorHandler;
 import org.xml.sax.SAXException;
 
 public class BaseValidatorMain {
