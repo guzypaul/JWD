@@ -82,18 +82,17 @@ public class PaperStaxBuilder {
     private Magazine buildMagazine(XMLStreamReader reader) throws XMLStreamException, ServiceException {
         Magazine magazine = new Magazine();
         magazine.setId(reader.getAttributeValue(null, PaperTagEnum.ID.getTagName()));
+        magazine.setGenre(reader.getAttributeValue(null, PaperTagEnum.GENRE.getTagName()));
 
         while (reader.hasNext()) {
             int type = reader.next();
             switch (type) {
                 case XMLStreamReader.START_ELEMENT:
-                    PaperTagEnum paperTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    PaperTagEnum paperTag = PaperTagEnum.findPaperTag(reader.getLocalName()); //todo switch-case
                     if (paperTag == PaperTagEnum.IS_GLOSS) {
                         magazine.setGloss(Boolean.parseBoolean(getXMLText(reader)));
                     } else if (paperTag == PaperTagEnum.INDEX) {
                         magazine.setIndex(Integer.parseInt(getXMLText(reader)));
-                    } else if (paperTag == PaperTagEnum.GENRE) {
-                        magazine.setGenre(getXMLText(reader));
                     } else {
                         buildPaper(paperTag, magazine, reader);
                     }
@@ -137,7 +136,7 @@ public class PaperStaxBuilder {
         throw new ServiceException("No element");
     }
 
-    private void buildPaper(PaperTagEnum paperTag, Paper paper, XMLStreamReader reader) throws XMLStreamException {
+    private void buildPaper(PaperTagEnum paperTag, Paper paper, XMLStreamReader reader) throws XMLStreamException, ServiceException {
         switch (paperTag) {
             case TITLE:
                 paper.setTitle(getXMLText(reader));
@@ -152,24 +151,41 @@ public class PaperStaxBuilder {
                 break;
 
             case CHARS:
-                paper.setChars(buildChars(paperTag, reader));
+                paper.setChars(buildChars(reader));
                 break;
         }
     }
 
-    private Chars buildChars(PaperTagEnum paperTag, XMLStreamReader reader) throws XMLStreamException { //todo
+    private Chars buildChars(XMLStreamReader reader) throws XMLStreamException, ServiceException { //todo
         Chars chars = new Chars();
-        switch (paperTag) {
-            case VOLUME:
-                chars.setVolume(Integer.parseInt(getXMLText(reader)));
-                break;
 
-            case IS_COLOR:
-                chars.setColor(Boolean.parseBoolean(getXMLText(reader)));
-                break;
+        while (reader.hasNext()) {
+            int type = reader.next();
+            switch (type) {
+                case XMLStreamReader.START_ELEMENT:
+                    PaperTagEnum paperTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+
+                    switch (paperTag) {
+                        case VOLUME:
+                            chars.setVolume(Integer.parseInt(getXMLText(reader)));
+                            break;
+
+                        case IS_COLOR:
+                            chars.setColor(Boolean.parseBoolean(getXMLText(reader)));
+                            break;
+                    }
+                    break;
+
+                case XMLStreamReader.END_ELEMENT:
+                    PaperTagEnum paperEnumTag = PaperTagEnum.findPaperTag(reader.getLocalName());
+                    if (paperEnumTag == PaperTagEnum.CHARS) {
+                        return chars;
+                    }
+                    break;
+            }
         }
 
-        return chars;
+        throw new ServiceException("No element!");
     }
 
     private String getXMLText(XMLStreamReader reader) throws XMLStreamException {
