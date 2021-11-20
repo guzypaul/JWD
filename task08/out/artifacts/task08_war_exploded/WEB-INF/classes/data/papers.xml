@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.training.by/paper"
+        xsi:schemaLocation="http://www.training.by/paper papers.xsd">
+
+    <magazine id="e10">
+        <title>Cosmopolitan</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>200</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-12-12</date-of-print>
+        <index>132469</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
+
+    <magazine id="e11" genre="business">
+        <title>Forbes</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>170</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-11-11</date-of-print>
+        <index>326578</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
+
+    <magazine id="e12" genre="entertainment">
+        <title>maxim</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>250</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-11-13</date-of-print>
+        <index>785621</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
+
+    <magazine id="e13">
+        <title>Vogue</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>198</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-10-23</date-of-print>
+        <index>658921</index>
+        <is-gloss>true</is-gloss>
+    </magazine>
+
+    <magazine id="e14">
+        <title>MotoGP</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>130</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-09-23</date-of-print>
+        <index>111156</index>
+        <is-gloss>false</is-gloss>
+    </magazine>
+
+    <newspaper id="e21">
+        <title>The New York times</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>24</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-11-26</date-of-print>
+        <index>232323</index>
+    </newspaper>
+
+    <newspaper id="e22">
+        <title>The world</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>22</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-01-21</date-of-print>
+        <index>363696</index>
+    </newspaper>
+
+    <newspaper id="e23">
+        <title>The times</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>20</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-08-12</date-of-print>
+        <index>554499</index>
+    </newspaper>
+
+    <newspaper id="e24">
+        <title>The USA today</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>18</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-08-14</date-of-print>
+        <index>554498</index>
+    </newspaper>
+
+    <newspaper id="e25">
+        <title>Muzyckaya prauda</title>
+        <chars>
+            <is-color>false</is-color>
+            <volume>10</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>1862-08-14</date-of-print>
+        <index>000001</index>
+    </newspaper>
+
+    <booklet id="e31">
+        <title>Industry</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-02-15</date-of-print>
+        <is-gloss>true</is-gloss>
+    </booklet>
+
+    <booklet id="e32">
+        <title>Auto</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>4</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-02-16</date-of-print>
+        <is-gloss>true</is-gloss>
+    </booklet>
+
+    <booklet id="e33">
+        <title>Business</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-02-16</date-of-print>
+        <is-gloss>true</is-gloss>
+    </booklet>
+
+    <booklet id="e34">
+        <title>Science</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>2</volume>
+        </chars>
+        <is-monthly>true</is-monthly>
+        <date-of-print>2021-02-22</date-of-print>
+        <is-gloss>true</is-gloss>
+    </booklet>
+
+    <booklet id="e35">
+        <title>Weapon</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>1</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-03-15</date-of-print>
+        <is-gloss>true</is-gloss>
+    </booklet>
+
+    <booklet id="e36">
+        <title>Moto</title>
+        <chars>
+            <is-color>true</is-color>
+            <volume>1</volume>
+        </chars>
+        <is-monthly>false</is-monthly>
+        <date-of-print>2021-04-16</date-of-print>
+        <is-gloss>false</is-gloss>
+    </booklet>
+
+</papers>
